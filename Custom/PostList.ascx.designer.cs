@@ -7,54 +7,45 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BlogEngine.Web.themes.SoulStops2 {
+namespace BlogEngine.Web.Custom {
     
     
-    public partial class Site {
+    public partial class PostList {
         
         /// <summary>
-        /// head control.
+        /// posts control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl posts;
         
         /// <summary>
-        /// form1 control.
+        /// hlPrev control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor hlPrev;
         
         /// <summary>
-        /// cphBody control.
+        /// hlNext control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphBody;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor hlNext;
         
         /// <summary>
-        /// RecentTopPosts1 control.
+        /// pager1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::BlogEngine.Web.Custom.RecentTopPosts RecentTopPosts1;
-        
-        /// <summary>
-        /// TopPosts2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::BlogEngine.Web.Custom.TopPosts TopPosts2;
+        protected global::App_Code.Controls.PostPager pager1;
     }
 }

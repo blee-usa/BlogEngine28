@@ -27,7 +27,7 @@ public partial class _default {
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::UserControls.PostList PostList1;
+    protected global::BlogEngine.Web.Custom.PostList PostList1;
     
     /// <summary>
     /// calendar control.

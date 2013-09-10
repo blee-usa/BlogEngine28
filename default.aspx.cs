@@ -62,51 +62,51 @@ public partial class _default : BlogEngine.Core.Web.Controls.BlogBasePage
 
 	private void DisplayApmlFiltering()
 	{
-		Uri url = null;
-		if (Uri.TryCreate(Request.QueryString["apml"], UriKind.Absolute, out url))
-		{
-			Page.Title = "APML filtered list";
-			try
-			{
-				Dictionary<Uri, XmlDocument> docs = Utils.FindSemanticDocuments(url, "apml");
-				if (docs.Count > 0)
-				{
-					foreach (Uri key in docs.Keys)
-					{
-                        PostList1.ContentBy = ServingContentBy.Apml;
-						PostList1.Posts = Search.ApmlMatches(docs[key], 30).FindAll(delegate(IPublishable p) { return p is Post; });
-						PostList1.Posts.Sort(delegate(IPublishable ip1, IPublishable ip2) { return ip2.DateCreated.CompareTo(ip1.DateCreated); });
-						Page.Title += " for " + Server.HtmlEncode(key.Host);
-						break;
-					}
-				}
-				else
-				{
-					divError.InnerHtml = "<h1 style=\"text-align:center\">APML document could not be found</h1><br /><br />";
-					Page.Title = "APML not found";
-				}
-			}
-			catch (NotSupportedException)
-			{
-				divError.InnerHtml = "<h1 style=\"text-align:center\">The website entered doesn't contain any information about APML</h1><br /><br />";
-				Page.Title = "APML not found";
-			}
-			catch (System.Net.WebException)
-			{
-				divError.InnerHtml = "<h1 style=\"text-align:center\">Sorry, I couldn't connect to your website</h1><br /><br />";
-				Page.Title = "APML address invalid";
-			}
-			catch (XmlException)
-			{
-				divError.InnerHtml = "<h1 style=\"text-align:center\">The APML document is not valid XML</h1><br /><br />";
-				Page.Title = "APML document error";
-			}
-		}
-		else if (PostList1.Posts == null || PostList1.Posts.Count == 0)
-		{
-			divError.InnerHtml = "<h1 style=\"text-align:center\">The URL could not be resolved</h1><br /><br />";
-			Page.Title = "APML not found";
-		}
+        //Uri url = null;
+        //if (Uri.TryCreate(Request.QueryString["apml"], UriKind.Absolute, out url))
+        //{
+        //    Page.Title = "APML filtered list";
+        //    try
+        //    {
+        //        Dictionary<Uri, XmlDocument> docs = Utils.FindSemanticDocuments(url, "apml");
+        //        if (docs.Count > 0)
+        //        {
+        //            foreach (Uri key in docs.Keys)
+        //            {
+        //                PostList1.ContentBy = ServingContentBy.Apml;
+        //                PostList1.Posts = Search.ApmlMatches(docs[key], 30).FindAll(delegate(IPublishable p) { return p is Post; });
+        //                PostList1.Posts.Sort(delegate(IPublishable ip1, IPublishable ip2) { return ip2.DateCreated.CompareTo(ip1.DateCreated); });
+        //                Page.Title += " for " + Server.HtmlEncode(key.Host);
+        //                break;
+        //            }
+        //        }
+        //        else
+        //        {
+        //            divError.InnerHtml = "<h1 style=\"text-align:center\">APML document could not be found</h1><br /><br />";
+        //            Page.Title = "APML not found";
+        //        }
+        //    }
+        //    catch (NotSupportedException)
+        //    {
+        //        divError.InnerHtml = "<h1 style=\"text-align:center\">The website entered doesn't contain any information about APML</h1><br /><br />";
+        //        Page.Title = "APML not found";
+        //    }
+        //    catch (System.Net.WebException)
+        //    {
+        //        divError.InnerHtml = "<h1 style=\"text-align:center\">Sorry, I couldn't connect to your website</h1><br /><br />";
+        //        Page.Title = "APML address invalid";
+        //    }
+        //    catch (XmlException)
+        //    {
+        //        divError.InnerHtml = "<h1 style=\"text-align:center\">The APML document is not valid XML</h1><br /><br />";
+        //        Page.Title = "APML document error";
+        //    }
+        //}
+        //else if (PostList1.Posts == null || PostList1.Posts.Count == 0)
+        //{
+        //    divError.InnerHtml = "<h1 style=\"text-align:center\">The URL could not be resolved</h1><br /><br />";
+        //    Page.Title = "APML not found";
+        //}
 	}
 	
 	/// <summary>
@@ -184,74 +184,74 @@ public partial class _default : BlogEngine.Core.Web.Controls.BlogBasePage
 
 	private void DisplayCategories()
 	{
-		if (!String.IsNullOrEmpty(Request.QueryString["id"]))
-		{
-			Guid categoryId = new Guid(Request.QueryString["id"]);
-            PostList1.ContentBy = ServingContentBy.Category;
-            Category category = Category.GetCategory(categoryId, Blog.CurrentInstance.IsSiteAggregation);
-			PostList1.Posts = Post.GetPostsByCategory(category).ConvertAll(new Converter<Post, IPublishable>(delegate(Post p) { return p as IPublishable; }));
-            Page.Title = category.Title;
-            base.AddMetaTag("description", string.IsNullOrWhiteSpace(category.Description) ? Server.HtmlEncode(BlogSettings.Instance.Description + ", " + category.Title) : category.Description);
-        }
+        //if (!String.IsNullOrEmpty(Request.QueryString["id"]))
+        //{
+        //    Guid categoryId = new Guid(Request.QueryString["id"]);
+        //    PostList1.ContentBy = ServingContentBy.Category;
+        //    Category category = Category.GetCategory(categoryId, Blog.CurrentInstance.IsSiteAggregation);
+        //    PostList1.Posts = Post.GetPostsByCategory(category).ConvertAll(new Converter<Post, IPublishable>(delegate(Post p) { return p as IPublishable; }));
+        //    Page.Title = category.Title;
+        //    base.AddMetaTag("description", string.IsNullOrWhiteSpace(category.Description) ? Server.HtmlEncode(BlogSettings.Instance.Description + ", " + category.Title) : category.Description);
+        //}
 	}
 
 	private void DisplayAuthors()
 	{
-		if (!string.IsNullOrEmpty(Request.QueryString["name"]))
-		{
-			string author = Server.UrlDecode(Request.QueryString["name"]);
-            PostList1.ContentBy = ServingContentBy.Author;
-			PostList1.Posts = Post.GetPostsByAuthor(author).ConvertAll(new Converter<Post, IPublishable>(delegate(Post p) { return p as IPublishable; }));
-			Title = Resources.labels.AllPostsBy +" " + Server.HtmlEncode(author);
-            base.AddMetaTag("description", Server.HtmlEncode(BlogSettings.Instance.Description + ", " + Title));
-		}
+        //if (!string.IsNullOrEmpty(Request.QueryString["name"]))
+        //{
+        //    string author = Server.UrlDecode(Request.QueryString["name"]);
+        //    PostList1.ContentBy = ServingContentBy.Author;
+        //    PostList1.Posts = Post.GetPostsByAuthor(author).ConvertAll(new Converter<Post, IPublishable>(delegate(Post p) { return p as IPublishable; }));
+        //    Title = Resources.labels.AllPostsBy +" " + Server.HtmlEncode(author);
+        //    base.AddMetaTag("description", Server.HtmlEncode(BlogSettings.Instance.Description + ", " + Title));
+        //}
 	}
 
 	private void DisplayTags()
 	{
-		if (!string.IsNullOrEmpty(Request.QueryString["tag"]))
-		{
-            PostList1.ContentBy = ServingContentBy.Tag;
-			PostList1.Posts = Post.GetPostsByTag(Request.QueryString["tag"].Substring(1)).ConvertAll(new Converter<Post, IPublishable>(delegate(Post p) { return p as IPublishable; }));
-			base.Title = Resources.labels.AllPostsTagged + " '" + Request.QueryString["tag"].Substring(1) + "'";
-            base.AddMetaTag("description", Server.HtmlEncode(BlogSettings.Instance.Description + ", " + base.Title));
-		}
+        //if (!string.IsNullOrEmpty(Request.QueryString["tag"]))
+        //{
+        //    PostList1.ContentBy = ServingContentBy.Tag;
+        //    PostList1.Posts = Post.GetPostsByTag(Request.QueryString["tag"].Substring(1)).ConvertAll(new Converter<Post, IPublishable>(delegate(Post p) { return p as IPublishable; }));
+        //    base.Title = Resources.labels.AllPostsTagged + " '" + Request.QueryString["tag"].Substring(1) + "'";
+        //    base.AddMetaTag("description", Server.HtmlEncode(BlogSettings.Instance.Description + ", " + base.Title));
+        //}
 	}
 
 	private void DisplayDateRange()
 	{
-		string year = Request.QueryString["year"];
-		string month = Request.QueryString["month"];
-		string specificDate = Request.QueryString["date"];
+        //string year = Request.QueryString["year"];
+        //string month = Request.QueryString["month"];
+        //string specificDate = Request.QueryString["date"];
 
-		if (!string.IsNullOrEmpty(year) && !string.IsNullOrEmpty(month))
-		{
-			DateTime dateFrom = DateTime.Parse(year + "-" + month + "-01", CultureInfo.InvariantCulture);
-			DateTime dateTo = dateFrom.AddMonths(1).AddMilliseconds(-1);
-            PostList1.ContentBy = ServingContentBy.DateRange;
-			PostList1.Posts = Post.GetPostsByDate(dateFrom, dateTo).ConvertAll(new Converter<Post, IPublishable>(delegate(Post p) { return p as IPublishable; }));
-			Title = dateFrom.ToString("MMMM yyyy");
-		}
-		else if (!string.IsNullOrEmpty(year))
-		{
-			DateTime dateFrom = DateTime.Parse(year + "-01-01", CultureInfo.InvariantCulture);
-			DateTime dateTo = dateFrom.AddYears(1).AddMilliseconds(-1);
-            PostList1.ContentBy = ServingContentBy.DateRange;
-			PostList1.Posts = Post.GetPostsByDate(dateFrom, dateTo).ConvertAll(new Converter<Post, IPublishable>(delegate(Post p) { return p as IPublishable; })); ;
-			Title = dateFrom.ToString("yyyy");
-		}
-		else if (!string.IsNullOrEmpty(specificDate) && specificDate.Length == 10)
-		{
-			DateTime date = DateTime.Parse(specificDate, CultureInfo.InvariantCulture);
-            PostList1.ContentBy = ServingContentBy.DateRange;
-			PostList1.Posts = Post.GetPostsByDate(date, date).ConvertAll(new Converter<Post, IPublishable>(delegate(Post p) { return p as IPublishable; })); ;
-			Title = date.ToString("MMMM d. yyyy");
-		}
-		else if (!string.IsNullOrEmpty(Request.QueryString["calendar"]))
-		{
-			calendar.Visible = true;
-			PostList1.Visible = false;
-			Title = Server.HtmlEncode(Resources.labels.calendar);
-		}
+        //if (!string.IsNullOrEmpty(year) && !string.IsNullOrEmpty(month))
+        //{
+        //    DateTime dateFrom = DateTime.Parse(year + "-" + month + "-01", CultureInfo.InvariantCulture);
+        //    DateTime dateTo = dateFrom.AddMonths(1).AddMilliseconds(-1);
+        //    PostList1.ContentBy = ServingContentBy.DateRange;
+        //    PostList1.Posts = Post.GetPostsByDate(dateFrom, dateTo).ConvertAll(new Converter<Post, IPublishable>(delegate(Post p) { return p as IPublishable; }));
+        //    Title = dateFrom.ToString("MMMM yyyy");
+        //}
+        //else if (!string.IsNullOrEmpty(year))
+        //{
+        //    DateTime dateFrom = DateTime.Parse(year + "-01-01", CultureInfo.InvariantCulture);
+        //    DateTime dateTo = dateFrom.AddYears(1).AddMilliseconds(-1);
+        //    PostList1.ContentBy = ServingContentBy.DateRange;
+        //    PostList1.Posts = Post.GetPostsByDate(dateFrom, dateTo).ConvertAll(new Converter<Post, IPublishable>(delegate(Post p) { return p as IPublishable; })); ;
+        //    Title = dateFrom.ToString("yyyy");
+        //}
+        //else if (!string.IsNullOrEmpty(specificDate) && specificDate.Length == 10)
+        //{
+        //    DateTime date = DateTime.Parse(specificDate, CultureInfo.InvariantCulture);
+        //    PostList1.ContentBy = ServingContentBy.DateRange;
+        //    PostList1.Posts = Post.GetPostsByDate(date, date).ConvertAll(new Converter<Post, IPublishable>(delegate(Post p) { return p as IPublishable; })); ;
+        //    Title = date.ToString("MMMM d. yyyy");
+        //}
+        //else if (!string.IsNullOrEmpty(Request.QueryString["calendar"]))
+        //{
+        //    calendar.Visible = true;
+        //    PostList1.Visible = false;
+        //    Title = Server.HtmlEncode(Resources.labels.calendar);
+        //}
 	}
 }

@@ -327,6 +327,59 @@
     <Content Include="App_Data\users.xml" />
     <Content Include="App_GlobalResources\Notes On Labels.resx.txt" />
     <Content Include="archive.aspx" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\images\addtplgreen.png" />
+    <Content Include="assets\images\arrow-empty-999999.png" />
+    <Content Include="assets\images\arrowgreen.png" />
+    <Content Include="assets\images\bigbubble.png" />
+    <Content Include="assets\images\border-left-on.gif" />
+    <Content Include="assets\images\breadcr-arr.png" />
+    <Content Include="assets\images\colorbox\border1.png" />
+    <Content Include="assets\images\colorbox\border2.png" />
+    <Content Include="assets\images\colorbox\loading.gif" />
+    <Content Include="assets\images\commentarrow-white.png" />
+    <Content Include="assets\images\commentarrow.png" />
+    <Content Include="assets\images\commentarrow2.png" />
+    <Content Include="assets\images\comments.png" />
+    <Content Include="assets\images\divider.png" />
+    <Content Include="assets\images\divider2.png" />
+    <Content Include="assets\images\divider3.png" />
+    <Content Include="assets\images\expand-right.gif" />
+    <Content Include="assets\images\favicon.ico" />
+    <Content Include="assets\images\favicon.png" />
+    <Content Include="assets\images\gray-arrow.gif" />
+    <Content Include="assets\images\gray-filter.svg" />
+    <Content Include="assets\images\house-15x15-bbbbbb.png" />
+    <Content Include="assets\images\icon-collection4.png" />
+    <Content Include="assets\images\icons.png" />
+    <Content Include="assets\images\logo.png" />
+    <Content Include="assets\images\logo10.png" />
+    <Content Include="assets\images\logo11.png" />
+    <Content Include="assets\images\logo12.png" />
+    <Content Include="assets\images\logo13.png" />
+    <Content Include="assets\images\logo14.png" />
+    <Content Include="assets\images\logo2.png" />
+    <Content Include="assets\images\logo3.png" />
+    <Content Include="assets\images\logo6.png" />
+    <Content Include="assets\images\logo7.png" />
+    <Content Include="assets\images\logo8.png" />
+    <Content Include="assets\images\logo9.png" />
+    <Content Include="assets\images\menu-icons-0090d3.png" />
+    <Content Include="assets\images\menuline.png" />
+    <Content Include="assets\images\round-gray.gif" />
+    <Content Include="assets\images\rss.png" />
+    <Content Include="assets\images\searchicon.png" />
+    <Content Include="assets\images\shadow.png" />
+    <Content Include="assets\images\transparent.gif" />
+    <Content Include="assets\images\widgetline.png" />
+    <Content Include="assets\js\javascript.js" />
+    <Content Include="assets\js\jquery\jquery-migrate.min.js" />
+    <Content Include="assets\js\jquery\jquery.js" />
+    <Content Include="assets\js\jquery\jquery_1_8_2.min.js" />
+    <Content Include="assets\js\jquery\ui\jquery.ui.core.min.js" />
+    <Content Include="assets\js\jquery\ui\jquery.ui.effect.min.js" />
+    <Content Include="assets\js\jquery\ui\jquery.ui.widget.min.js" />
+    <Content Include="assets\js\smooth-menu.js" />
     <Content Include="bin\AjaxMin.dll" />
     <Content Include="bin\BlogEngine.Core.dll" />
     <Content Include="bin\BlogEngine.Core.pdb" />
@@ -347,6 +400,8 @@
     <Content Include="contact.aspx" />
     <Content Include="Content\Auto\Global.css" />
     <Content Include="Content\Global.css" />
+    <Content Include="Custom\PostList.ascx" />
+    <Content Include="Custom\PostView.ascx" />
     <Content Include="Custom\Quotes.ascx" />
     <Content Include="Custom\RecentTopPosts.ascx" />
     <Content Include="Custom\TopPosts.ascx" />
@@ -1038,8 +1093,7 @@
     <Content Include="User controls\PostList.ascx" />
     <Content Include="Web.Config" />
     <Content Include="themes\SoulStops\site.master" />
-    <Content Include="themes\SoulStops2\site.master" />
-    <None Include="Web.config.orig" />
+    <Content Include="themes\SoulStops2\Site.master" />
     <Content Include="widgets\Administration\screenshot.png" />
     <Content Include="widgets\Administration\widget.ascx" />
     <Content Include="widgets\Administration\widget.xml" />
@@ -1772,6 +1826,21 @@
       <DependentUpon>contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="Custom\Counter.cs" />
+    <Compile Include="Custom\Helpers.cs" />
+    <Compile Include="Custom\PostList.ascx.cs">
+      <DependentUpon>PostList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Custom\PostList.ascx.designer.cs">
+      <DependentUpon>PostList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\PostView.ascx.cs">
+      <DependentUpon>PostView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Custom\PostView.ascx.designer.cs">
+      <DependentUpon>PostView.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Custom\Quotes.ascx.cs">
       <DependentUpon>Quotes.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1836,11 +1905,12 @@
     <Compile Include="search.aspx.designer.cs">
       <DependentUpon>search.aspx</DependentUpon>
     </Compile>
-    <Compile Include="themes\SoulStops2\site.master.cs">
-      <DependentUpon>site.master</DependentUpon>
+    <Compile Include="themes\SoulStops2\Site.master.cs">
+      <DependentUpon>Site.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="themes\SoulStops2\site.master.designer.cs">
-      <DependentUpon>site.master</DependentUpon>
+    <Compile Include="themes\SoulStops2\Site.master.designer.cs">
+      <DependentUpon>Site.master</DependentUpon>
     </Compile>
     <Compile Include="themes\SoulStops\site.master.cs">
       <DependentUpon>site.master</DependentUpon>
@@ -2112,12 +2182,6 @@
     <Content Include="tests\urlrewrite.cshtml" />
     <Content Include="tests\_layout.cshtml" />
     <Content Include="themes\Mobile\site.master" />
-    <None Include="Web.config.Debug.orig">
-      <DependentUpon>Web.config.orig</DependentUpon>
-    </None>
-    <None Include="Web.config.Release.orig">
-      <DependentUpon>Web.config.orig</DependentUpon>
-    </None>
     <Content Include="Web.sitemap" />
     <Content Include="widgets\Visitor info\apmlchecker.ashx" />
   </ItemGroup>
