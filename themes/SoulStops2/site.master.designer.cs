@@ -31,6 +31,15 @@ namespace BlogEngine.Web.themes.SoulStops2 {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// cphBreadcrumbs control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphBreadcrumbs;
+        
+        /// <summary>
         /// cphBody control.
         /// </summary>
         /// <remarks>
@@ -56,5 +65,14 @@ namespace BlogEngine.Web.themes.SoulStops2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::BlogEngine.Web.Custom.TopPosts TopPosts2;
+        
+        /// <summary>
+        /// cphBodyScript control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphBodyScript;
     }
 }

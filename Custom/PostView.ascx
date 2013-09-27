@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PostView.ascx.cs" Inherits="BlogEngine.Web.Custom.PostView" %>
 
 
-<div id="post-35" class="post hentry cf">
+<div class="post cf hentry">
 
 	<h2>
 		<span class="post-format"></span>
@@ -9,7 +9,7 @@
 		
 	</h2>
 
-	<div class="thumb-shadow"><div class="post-thumb"><a href="http://localhost:2471/?p=35"><img src="<%=GetFirstImageSource(Post) %>" height="180" alt="<%=Post.Title%>" /></a></div></div>
+	<div class="thumb-shadow"><div class="post-thumb"><a href="<%=Post.RelativeLink %>"><img src="<%=GetFirstImageSource(Post) %>" height="180" alt="<%=Post.Title%>" /></a></div></div>
 	
 	<div class="post-bodycopy cf">
 	

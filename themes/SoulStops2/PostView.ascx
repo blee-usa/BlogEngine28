@@ -1,5 +1,6 @@
 <%@ Control Language="C#" AutoEventWireup="true" EnableViewState="false" Inherits="BlogEngine.Core.Web.Controls.PostViewBase" %>
 
+
 <script runat="server">
 
     protected string GetColoredTitle(string title)
@@ -24,8 +25,27 @@
 
 </script>
 
+<div class="post cf hentry">
 
-<div id="post-35" class="post hentry cf">
+			<h2>
+			    
+                <span class="post-format"></span>
+				<a rel="bookmark" href="<%=Post.RelativeLink %>" title="<%=Post.Title%>"><%=Post.Title%></a>
+			</h2>
+
+			<div class="post-footer">
+                <%=Post.DateCreated.ToString(" dd MMM yyyy")%> |<%=CategoryLinks("|")%>
+			</div>
+
+			<div class="post-bodycopy cf">
+                <%=Post.Content.Trim() %>
+			</div>
+</div>  
+
+
+<asp:PlaceHolder runat="server" Visible="False">
+
+<div class="post hentry cf">
 
 	<h2>
 		<span class="post-format"></span>
@@ -56,3 +76,4 @@
 	</div>
 	
 </div>
+    </asp:PlaceHolder>
