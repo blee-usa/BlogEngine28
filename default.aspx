@@ -1,21 +1,45 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="_default" Codebehind="default.aspx.cs" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="_default" CodeBehind="default.aspx.cs" %>
+
 <%@ Register Src="Custom/PostList.ascx" TagName="PostList" TagPrefix="uc1" %>
 
 
-<asp:Content ID="Content3" ContentPlaceHolderID="cphBreadcrumbs" Runat="Server">
+<asp:content id="Content3" contentplaceholderid="cphBreadcrumbs" runat="Server">
+    
+    
+    
+    
+    <asp:MultiView runat="server" ID="mvBreadcrumbs">
+        <asp:View runat="server" ID="View0">
         <ul class="bxslider">
-  <li><img src="/pics/slide1.jpg" /></li>
-  <li><img src="/pics/slide2.jpg" /></li>
-  <li><img style="position: relative; " src="/pics/slide3.jpg" /><div style="position: absolute; 
-   top: 100px; background-color: white;
-   left: 20px; 
-   width: 20%;">asdfasfdasfas asd asdfasdf asdfa s</div></li>
-            <li>hello world <a href="#">clicke here</a></li>
-</ul>
-</asp:Content>
+          <li><img style="position: relative; " src="/pics/slide3.jpg" /><div style="position: absolute; 
+           top: 100px; background-color: white;
+           left: 20px; 
+           width: 20%;">asdfasfdasfas asd asdfasdf asdfa s</div></li>
+                    <li>hello world <a href="#">clicke here</a></li>
+        </ul>
+            
+
+        </asp:View>
+        <asp:View runat="server" ID="View1">
+            
+                        <nav id="breadcrumbs1" class="breadcrumbs lw">
+                
+                
+                <ol>
+                    <li class="bc-home"><a href="~">&nbsp;</a></li>
+                    <li><span class="bc-current"><asp:Literal runat="server" ID="litCategory"></asp:Literal></span></li>
+                </ol>
+            </nav>
+            
+
+        </asp:View>
+        <asp:View runat="server" ID="View2"></asp:View>
+    </asp:MultiView>
+
+</asp:content>
 
 
-<asp:Content ID="Content1" ContentPlaceHolderID="cphBody" Runat="Server">
+<asp:content id="Content1" contentplaceholderid="cphBody" runat="Server">
     
   <div id="divError" runat="Server" />
     
@@ -34,21 +58,22 @@
     UseAccessibleHeader="true" 
     Visible="false" 
     Width="100%" />    
-</asp:Content>
+</asp:content>
 
 
-<asp:Content ID="Content2" ContentPlaceHolderID="cphBodyScript" Runat="Server">
+<asp:content id="Content2" contentplaceholderid="cphBodyScript" runat="Server">
     <script>
-    $(document).ready(function(){
-        $('.bxslider').bxSlider({
-            auto: true,
-            autoControls: true,
-            controls: false,
-            easing: "easeOutCirc",
-            speed: 2000
+        $(document).ready(function () {
+            $('.bxslider').bxSlider({
+                auto: true,
+                autoControls: true,
+                controls: false,
+                pause: 6000
+               /* easing: "easeOutCirc",
+                speed: 2000 */
+            });
         });
-    });
     </script>
-</asp:Content>
+</asp:content>
 
 

@@ -1,17 +1,11 @@
 ﻿using System;
-using System.Data;
-using System.Configuration;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Web;
-using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Web.UI.WebControls.WebParts;
-using System.Web.UI.HtmlControls;
 using System.Xml;
-using BlogEngine.Core;
 
 namespace BlogEngine.Web.Custom
 {
@@ -95,7 +89,7 @@ namespace BlogEngine.Web.Custom
         private List<Quote> GetQuotes()
         {
             // Check if it is in the cache already
-            List<Quote> quotes = (List<Quote>) Cache["quotes"];
+            List<Quote> quotes = (List<Quote>)Cache["quotes"];
 
             if (quotes == null)
             {

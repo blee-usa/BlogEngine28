@@ -407,6 +407,7 @@
     <Content Include="contact.aspx" />
     <Content Include="Content\Auto\Global.css" />
     <Content Include="Content\Global.css" />
+    <Content Include="Custom\Delicious.ascx" />
     <Content Include="Custom\PostList.ascx" />
     <Content Include="Custom\PostView.ascx" />
     <Content Include="Custom\Quotes.ascx" />
@@ -1834,6 +1835,13 @@
       <DependentUpon>contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="Custom\Counter.cs" />
+    <Compile Include="Custom\Delicious.ascx.cs">
+      <DependentUpon>Delicious.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Custom\Delicious.ascx.designer.cs">
+      <DependentUpon>Delicious.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Custom\Helpers.cs" />
     <Compile Include="Custom\PostList.ascx.cs">
       <DependentUpon>PostList.ascx</DependentUpon>
