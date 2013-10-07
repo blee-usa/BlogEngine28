@@ -1,19 +1,8 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="BlogEngine.Web.themes.SoulStops2.Site" %>
-
 <%@ Register src="../../Custom/TopPosts.ascx" tagname="TopPosts" tagprefix="uc1" %>
-
 <%@ Register src="../../Custom/RecentTopPosts.ascx" tagname="RecentTopPosts" tagprefix="uc2" %>
-<%@ Register TagPrefix="uc5" Namespace="BlogEngine.Web.Custom" Assembly="BlogEngine.Web" %>
-
-
-
 <%@ Register src="../../Custom/Quotes.ascx" tagname="Quotes" tagprefix="uc3" %>
-
-
-
 <%@ Register src="../../Custom/Delicious.ascx" tagname="Delicious" tagprefix="uc4" %>
-
-
 
 <!DOCTYPE html>
 
@@ -133,6 +122,14 @@
             </div>
 
             <div id="widgetarea-one" class="col4" style="padding-top: 30px">
+ <aside id="search-2" class="widget widget_search cf">
+                <div class="searchform">
+                    <asp:TextBox ID="tbSearch" CssClass="field" runat="server" MaxLength="100" Text="search" OnTextChanged="tbSearch_TextChanged"
+                        onblur="if(this.value==''){this.value='search'}" onfocus="if(this.value=='search'){this.value=''}"></asp:TextBox>
+                </div>
+
+   </aside>             
+
                 <aside class="widget widget_recent_entries cf" id="top-posts-2">
                     <h3><span>Current Favorites</span></h3>
 
@@ -149,14 +146,7 @@
                     </div>
                 </aside>
                 
-                <aside class="widget widget_recent_entries cf" id="top-recent-posts-2">
-                    <h3><span></h3>
 
-                    <h3>All-Time Favorites</span></h3>
-
-                    <uc1:TopPosts ID="TopPosts2" runat="server" Top="5" />
-
-                </aside>
                 
                 <aside class="widget cf">
                                         <h3><span>Sponser a Child</span>
@@ -176,13 +166,6 @@
                         
                          </aside>
 
-                   <aside class="widget widget_categories cf" id="categories-2">
-                                    <h3><span>Categories</span>
-                        </h3>
-
-                        <blog:CategoryList ID="CategoryList1" ShowRssIcon="false" runat="Server" />
-                   
-                  </aside>
                                       <aside class="widget widget_recent_entries cf" id="Aside2"> 
                     <h3><span>
                         Quote Quencher</span></h3>                   
@@ -207,7 +190,36 @@
             </div>
 
         </div>
+                <div class="cf" id="footerContainer" style="background-color: #0090D3">
+             <div class="row">
+                 <div class="1">&nbsp;&nbsp;&nbsp;</div>
+                                            <div class="col4">
 
+                   <aside class="widget widget_categories cf rounded" id="categories-2">
+                                    <h3><span>Categories</span>
+                        </h3>
+
+                        <blog:CategoryList ID="CategoryList1" ShowRssIcon="false" runat="Server" />
+                   
+                  </aside>
+                     </div>
+                    <div class="1">&nbsp;&nbsp;&nbsp;</div>
+                                             <div class="col6">
+                                 <aside class="widget widget_archive cf rounded" id="Aside3">
+
+                    <h3><span>All Time Favorites</span></h3>
+
+                             
+
+                             <uc1:TopPosts runat="server" Top="12"/>
+
+                             
+
+                </aside>
+                     </div>
+
+            </div>
+        </div>
         <div id="footer-bg">
             <div id="footer" class="lw">
 

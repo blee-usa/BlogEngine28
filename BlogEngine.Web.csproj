@@ -2355,6 +2355,7 @@
     <Folder Include="App_Data\blogs\Fox\datastore\widgets\" />
     <Folder Include="App_Data\blogs\Fox\posts\" />
     <Folder Include="App_Data\files\2013\04\" />
+    <Folder Include="pics\slides\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

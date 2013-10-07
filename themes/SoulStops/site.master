@@ -63,8 +63,8 @@
                 <li class="last"><span>&nbsp;</span></li>
             </ul>
             <div id="siteSearch">
-                <div>
-                    <asp:TextBox ID="tbSearch" runat="server" MaxLength="100" Text="search" OnTextChanged="tbSearch_TextChanged"
+                <div class="searchform">
+                    <asp:TextBox ID="tbSearch" CssClass="field" runat="server" MaxLength="100" Text="search" OnTextChanged="tbSearch_TextChanged"
                         onblur="if(this.value==''){this.value='search'}" onfocus="if(this.value=='search'){this.value=''}"></asp:TextBox>
                 </div>
             </div>

@@ -58,6 +58,15 @@ namespace BlogEngine.Web.themes.SoulStops2 {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder cphBody;
         
         /// <summary>
+        /// tbSearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbSearch;
+        
+        /// <summary>
         /// RecentTopPosts1 control.
         /// </summary>
         /// <remarks>
@@ -65,15 +74,6 @@ namespace BlogEngine.Web.themes.SoulStops2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::BlogEngine.Web.Custom.RecentTopPosts RecentTopPosts1;
-        
-        /// <summary>
-        /// TopPosts2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::BlogEngine.Web.Custom.TopPosts TopPosts2;
         
         /// <summary>
         /// Delicious1 control.
@@ -85,15 +85,6 @@ namespace BlogEngine.Web.themes.SoulStops2 {
         protected global::BlogEngine.Web.Custom.Delicious Delicious1;
         
         /// <summary>
-        /// CategoryList1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::App_Code.Controls.CategoryList CategoryList1;
-        
-        /// <summary>
         /// Quotes1 control.
         /// </summary>
         /// <remarks>
@@ -101,6 +92,15 @@ namespace BlogEngine.Web.themes.SoulStops2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::BlogEngine.Web.Custom.Quotes Quotes1;
+        
+        /// <summary>
+        /// CategoryList1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::App_Code.Controls.CategoryList CategoryList1;
         
         /// <summary>
         /// cphBodyScript control.

@@ -11,11 +11,21 @@
     <asp:MultiView runat="server" ID="mvBreadcrumbs">
         <asp:View runat="server" ID="View0">
         <ul class="bxslider">
-          <li><img style="position: relative; " src="/pics/slide3.jpg" /><div style="position: absolute; 
+                      <li><img style="position: relative; " src="/pics/slides/bench960x320.JPG" /><div style="position: absolute; 
            top: 100px; background-color: white;
            left: 20px; 
-           width: 20%;">asdfasfdasfas asd asdfasdf asdfa s</div></li>
-                    <li>hello world <a href="#">clicke here</a></li>
+           width: 20%;"><h1>Rest</h1><p>Lorum ispsum blay blay blah.</p></div></li>
+          <li><img style="position: relative; " src="/pics/slides/fallenLeafLake960x320.JPG" /><div style="position: absolute; 
+ background-color: white; top: 20px; left: 50px; border: 5px solid #9EC630;
+           width: 25%; height: 80%"><h1>Reflect</h1><p style="font-size: 18px">Tie a ribbon of remembrance around my heart, so that I often recall
+
+those sacred places where you have made yourself known in the
+
+hidden recesses of my life.</p></div></li>
+          <li><img style="position: relative; " src="/pics/slides/cloads960x320.JPG" /><div style="position: absolute; 
+           top: 100px; background-color: white;
+           left: 20px; 
+           width: 20%;"><h1>Renew</h1><p>Lorum ispsum blay blay blah.</p></div></li>
         </ul>
             
 
