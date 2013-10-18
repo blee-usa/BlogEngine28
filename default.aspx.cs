@@ -21,11 +21,16 @@ public partial class _default : BlogEngine.Core.Web.Controls.BlogBasePage
 		if (Request.RawUrl.ToLowerInvariant().Contains("/category/"))
 		{
 			DisplayCategories();
+		    mvBreadcrumbs.ActiveViewIndex = 1;
 		}
 		else if (Request.RawUrl.ToLowerInvariant().Contains("/author/"))
 		{
 			DisplayAuthors();
 		}
+        else if (Request.RawUrl.ToLowerInvariant().Contains("/page/"))
+        {
+            var obj = this.GetDataItem();
+        }
 		else if (Request.RawUrl.ToLowerInvariant().Contains("?tag="))
 		{
 			DisplayTags();
@@ -46,7 +51,8 @@ public partial class _default : BlogEngine.Core.Web.Controls.BlogBasePage
             base.AddMetaTag("description", Server.HtmlEncode(BlogSettings.Instance.Description));
 		}
 		else
-		{			
+		{
+		    mvBreadcrumbs.ActiveViewIndex = 0;
 			if (!BlogSettings.Instance.UseBlogNameInPageTitles)
 				Page.Title = BlogSettings.Instance.Name + " | ";
 
@@ -184,15 +190,16 @@ public partial class _default : BlogEngine.Core.Web.Controls.BlogBasePage
 
 	private void DisplayCategories()
 	{
-        //if (!String.IsNullOrEmpty(Request.QueryString["id"]))
-        //{
-        //    Guid categoryId = new Guid(Request.QueryString["id"]);
-        //    PostList1.ContentBy = ServingContentBy.Category;
-        //    Category category = Category.GetCategory(categoryId, Blog.CurrentInstance.IsSiteAggregation);
-        //    PostList1.Posts = Post.GetPostsByCategory(category).ConvertAll(new Converter<Post, IPublishable>(delegate(Post p) { return p as IPublishable; }));
-        //    Page.Title = category.Title;
-        //    base.AddMetaTag("description", string.IsNullOrWhiteSpace(category.Description) ? Server.HtmlEncode(BlogSettings.Instance.Description + ", " + category.Title) : category.Description);
-        //}
+        if (!String.IsNullOrEmpty(Request.QueryString["id"]))
+        {
+            Guid categoryId = new Guid(Request.QueryString["id"]);
+            PostList1.ContentBy = ServingContentBy.Category;
+            Category category = Category.GetCategory(categoryId, Blog.CurrentInstance.IsSiteAggregation);
+            litCategory.Text = category == null ? "" : category.Title;
+            PostList1.Posts = Post.GetPostsByCategory(category).ConvertAll(new Converter<Post, IPublishable>(delegate(Post p) { return p as IPublishable; }));
+            Page.Title = category.Title;
+            base.AddMetaTag("description", string.IsNullOrWhiteSpace(category.Description) ? Server.HtmlEncode(BlogSettings.Instance.Description + ", " + category.Title) : category.Description);
+        }
 	}
 
 	private void DisplayAuthors()

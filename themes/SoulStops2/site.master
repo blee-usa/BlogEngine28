@@ -1,8 +1,8 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="BlogEngine.Web.themes.SoulStops2.Site" %>
-
 <%@ Register src="../../Custom/TopPosts.ascx" tagname="TopPosts" tagprefix="uc1" %>
-
 <%@ Register src="../../Custom/RecentTopPosts.ascx" tagname="RecentTopPosts" tagprefix="uc2" %>
+<%@ Register src="../../Custom/Quotes.ascx" tagname="Quotes" tagprefix="uc3" %>
+<%@ Register src="../../Custom/Delicious.ascx" tagname="Delicious" tagprefix="uc4" %>
 
 <!DOCTYPE html>
 
@@ -16,62 +16,96 @@
     <link rel="profile" href="http://gmpg.org/xfn/11" />
 
     <link rel="stylesheet" type="text/css" media="all" href='~/assets/css/style.css' />
+    
+        <!-- jQuery library (served from Google) -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
-    <script type='text/javascript' src='assets/js/jquery/jquery.js?ver=1.10.2'></script>
-    <script type='text/javascript' src='assets/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
-    <script type='text/javascript' src='assets/js/jquery/ui/jquery.ui.core.min.js?ver=1.10.3'></script>
-    <script type='text/javascript' src='assets/js/jquery/ui/jquery.ui.widget.min.js?ver=1.10.3'></script>
-    <script type='text/javascript' src='assets/js/jquery/ui/jquery.ui.effect.min.js?ver=1.10.3'></script>
-    <script type='text/javascript' src='assets/js/smooth-menu.js?ver=3.6'></script>
-    <script type='text/javascript' src='assets/js/javascript.js?ver=3.6'></script>
+  <!--  <script type='text/javascript' src='assets/js/jquery/jquery.js?ver=1.10.2'></script> -->
+    <script type='text/javascript' src="/assets/js/jquery/jquery-migrate.min.js?ver=1.2.1"></script>
+    <script type='text/javascript' src='/assets/js/jquery/ui/jquery.ui.core.min.js?ver=1.10.3'></script>
+    <script type='text/javascript' src='/assets/js/jquery/ui/jquery.ui.widget.min.js?ver=1.10.3'></script>
+    <script type='text/javascript' src='/assets/js/jquery/ui/jquery.ui.effect.min.js?ver=1.10.3'></script>
+    <script type='text/javascript' src='/assets/js/smooth-menu.js?ver=3.6'></script>
+    <script type='text/javascript' src='/assets/js/javascript.js?ver=3.6'></script>
+    
+    <!-- bxSlider Javascript file -->
+    <script src="/assets/js/jquery.bxslider/jquery.bxslider.min.js"></script>
+    <script src="/assets/js/jquery.bxslider/plugins/jquery.easing.1.3.js"></script>
+    <!-- bxSlider CSS file -->
+    <link type="text/css" media="all" href="/assets/js/jquery.bxslider/jquery.bxslider.css" rel="stylesheet" />
 
-
-    <%--
-    <script type='text/javascript' src='http://localhost:2471/wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
-<script type='text/javascript' src='http://localhost:2471/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
-<script type='text/javascript' src='http://localhost:2471/wp-includes/js/jquery/ui/jquery.ui.core.min.js?ver=1.10.3'></script>
-<script type='text/javascript' src='http://localhost:2471/wp-includes/js/jquery/ui/jquery.ui.widget.min.js?ver=1.10.3'></script>
-<script type='text/javascript' src='http://localhost:2471/wp-includes/js/jquery/ui/jquery.ui.effect.min.js?ver=1.10.3'></script>
-<script type='text/javascript' src='http://localhost:2471/wp-content/themes/montezuma/javascript/smooth-menu.js?ver=3.6'></script>
-<script type='text/javascript' src='http://localhost:2471/wp-content/uploads/montezuma/javascript.js?ver=3.6'></script>
-      
-    <script src="http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js" type="text/javascript" async=""></script>
-    <script type='text/javascript' src='~/assets/js/jquery/jquery.js?ver=1.10.2'></script>
-    <script type='text/javascript' src='~/assets/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
-    <script type='text/javascript' src='~/assets/js/jquery/ui/jquery.ui.core.min.js?ver=1.10.3'></script>
-    <script type='text/javascript' src='~/assets/js/jquery/ui/jquery.ui.widget.min.js?ver=1.10.3'></script>
-    <script type='text/javascript' src='~/assets/js/jquery/ui/jquery.ui.effect.min.js?ver=1.10.3'></script>
-    <script type='text/javascript' src='~/assets/js/smooth-menu.js?ver=3.6'></script>
-    <script type='text/javascript' src='~/assets/js/javascript.js?ver=3.6'></script>
-    --%>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200" />
 </head>
 <body class="home blog">
+    <div id="bodybg"> </div>
+    
+   <div id="fb-root"></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script> 
+    
+
     <form id="form1" runat="server">
-        <div id="banner-bg" class="cf">
-            <div id="banner" class="row">
-                <a href="/">
-                    <div id="logo-area" class="col5" style="height: 180px">
-                    </div>
-                </a>
-                <nav id="menu1-wrapper" class="menu-wrapper col7">
-                    <ul id="menu1" class="cf menu">
-                        <li class="page1"><a runat="server" href="~/about">About</a></li>
-                        <li class="page2"><a runat="server" href="~/contact.aspx">Contact</a></li>
-                    </ul>
-                </nav>
+        <div class="cf" id="topContainer"  style="display: none">
+             <div class="row">
+<ul>
+    <li>
+    <a class="icon facebook" href="http://facebook.com/cofitness" target="_blank" title="Facebook"><span>Facebook</span></a>
+    </li>
+    <li>
+    <a class="icon twitter" href="http://twitter.com/soulstops" target="_blank" title="Twitter"><span>Twitter</span></a>
+    </li>
+    <li>
+    <a class="icon email" href="http://www.linkedin.com/company/club-one" target="_blank" title="Subscribe"><span>Subscribe</span></a>
+    </li>
+    <li>
+    <a class="icon blog" href="/Feeds/Blog" target="_blank" title="RSS Feed"><span>Blog</span></a>
+    </li>
+</ul>
             </div>
         </div>
-        <div id="breadcrumbs1-bg">
+        <div id="banner-bg" class="cf">
+            <div id="banner" class="row">
+               
+                    <div id="logo-area" class="col5">
+                         <a href="/">
+                        <img src="/assets/i/logo232x120.png"/>
+                             </a>
+                    </div>
+                <nav id="menu1-wrapper" class="menu-wrapper col7">
+                    <ul id="menu1" class="cf menu">
+                        <li class="page1"><a runat="server" href="~/page/About-my-blog.aspx">About</a></li>
+                        <li class="page2"><a runat="server" href="~/contact.aspx">Contact</a></li>
+                        <li class="page3"><a id="A1" runat="server" href="~/page/Good-reads-and-other-musings.aspx">Good Reads</a></li>
+                        <li class="page3"><a id="A2" runat="server" href="~/archive.aspx">Archive</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+        <div id="breadcrumbs1-bg" class="row">
+              <nav id="breadcrumbs1" class="breadcrumbs lw col12">
+                                <asp:ContentPlaceHolder ID="cphBreadcrumbs" runat="server">
+    </asp:ContentPlaceHolder>
+            <%-- 
+
             <nav id="breadcrumbs1" class="breadcrumbs lw">
+                
+                
                 <ol>
                     <li class="bc-home"><a href="http://localhost:2471">&nbsp;</a></li>
                     <li><span class="bc-current">Blog</span></li>
                 </ol>
             </nav>
+            --%>
+                  </nav>
         </div>
 
         <div id="main" class="row">
@@ -81,39 +115,110 @@
 
             </div>
 
-            <div id="widgetarea-one" class="col4">
+            <div id="widgetarea-one" class="col4" style="padding-top: 30px">
+ <aside id="search-2" class="widget widget_search cf">
+                <div class="searchform">
+                    <asp:TextBox ID="tbSearch" CssClass="field" runat="server" MaxLength="100" Text="search" OnTextChanged="tbSearch_TextChanged"
+                        onblur="if(this.value==''){this.value='search'}" onfocus="if(this.value=='search'){this.value=''}"></asp:TextBox>
+                </div>
+
+   </aside>      
+                
+                            <aside id="widget-about" class="widget cf">
+                            <asp:Image ID="Image1" runat="server" ImageUrl="~/assets/i/blog2.jpg" CssClass="about" />
+                            <p>
+                                <span class="green"><strong>Welcome! </strong></span>This blog chronicles when I
+                                have stopped to listen to God speak through the Bible, nature, music, and others.
+                                I hope that by sharing my journey, it will encourage you to let your <span class="green">
+                                    <strong>soul</strong></span> <span class="blue"><strong>stop</strong></span>
+                                and hear God speak to you.</p>
+                            <p class="float-right">
+                                ~ Dolly&nbsp;&nbsp;&nbsp;</p>
+                </aside>
+                        
+               <aside class="widget widget_links w">
+                    <h3><span>Stay Connected</span></h3>
+                   <div class="fb-like-box" data-href="http://www.facebook.com/pages/Soulstopscom/556046861077393" data-width="The pixel width of the plugin" data-height="The pixel height of the plugin" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+
+               </aside>
+
                 <aside class="widget widget_recent_entries cf" id="top-posts-2">
-                    <h3><span class="firstpart">Current </span>Favorites</h3>
+                    <h3><span>Current Favorites</span></h3>
 
                     <uc2:RecentTopPosts ID="RecentTopPosts1" runat="server" Top="5" />
 
 
 
                 </aside>
-                
-                <aside class="widget widget_recent_entries cf" id="top-recent-posts-2">
-                    <h3><span class="firstpart">All-Time </span>Favorites</h3>
 
-                    <uc1:TopPosts ID="TopPosts2" runat="server" Top="5" />
-
+                <aside class="widget widget_recent_comments cf">
+                    <h3><span>Recent Comments</span></h3>
+                    <div id="recentcomments" class="dsq-widget">
+                        <script type="text/javascript" src="http://soulstops.disqus.com/recent_comments_widget.js?num_items=5&hide_avatars=0&avatar_size=32&excerpt_length=100&hide_mods=1"></script>
+                    </div>
                 </aside>
                 
 
-                <aside id="meta-2" class="widget widget_meta cf">
-                    <h3><span>Meta</span></h3>
-                    <ul>
-                        <li><a href="http://localhost:2471/wp-login.php">Log in</a></li>
-                        <li><a href="http://localhost:2471/?feed=rss2" title="Syndicate this site using RSS 2.0">Entries
-                        <abbr title="Really Simple Syndication">RSS</abbr></a></li>
-                        <li><a href="http://localhost:2471/?feed=comments-rss2" title="The latest comments to all posts in RSS">Comments
-                        <abbr title="Really Simple Syndication">RSS</abbr></a></li>
-                        <li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>
-                    </ul>
+                
+                <aside class="widget cf">
+                                        <h3><span>Sponser a Child</span>
+                        </h3>
+                
+                        <a href="http://www.worldvision.org/content.nsf/pages/horn-of-africa-famine-2011?open&campaign=1290087">
+                            <img src="http://blog.worldvision.org/wp-content/uploads/banners/Sfaminenomore.jpg"
+                                style="border: 0; margin-left: 10px; margin-top: 10px" width="240" height="200"
+                                alt="Famine no more"></a>
+                    
+                    
+
                 </aside>
+                    <aside class="widget widget_pages">
+<h3><span>Check 'em out!</span></h3>
+                    <uc4:Delicious ID="Delicious1" runat="server" />
+                        
+                         </aside>
+
+                                      <aside class="widget widget_recent_entries cf" id="Aside2"> 
+                    <h3><span>
+                        Quote Quencher</span></h3>                   
+
+
+                                          <uc3:Quotes ID="Quotes1" runat="server" />
+
+
+                </aside>
+
             </div>
 
         </div>
+                <div class="cf" id="footerContainer">
+             <div class="row"  style="border-top: 20px solid #0090D3; background-color: white; border-bottom: 20px solid white" >
+                                            <div class="col4">
 
+                   <aside class="widget widget_categories cf" id="categories-2" style="margin-left: 20px">
+                                    <h3><span>Categories</span>
+                        </h3>
+
+                        <blog:CategoryList ID="CategoryList1" ShowRssIcon="false" runat="Server" />
+                   
+                  </aside>
+                     </div>
+                                             <div class="col8">
+                                 <aside class="widget widget_archive cf" id="Aside3">
+
+                    <h3><span>All Time Favorites</span></h3>
+
+                             
+
+                             <uc1:TopPosts runat="server" Top="12"/>
+
+                             
+
+                </aside>
+                     </div>
+
+            </div>
+        </div>
         <div id="footer-bg">
             <div id="footer" class="lw">
 
@@ -126,9 +231,11 @@
         </div>
 
 
-
-
     </form>
+   
+        <asp:ContentPlaceHolder ID="cphBodyScript" runat="server">
+    </asp:ContentPlaceHolder>
+   
 </body>
 </html>
 

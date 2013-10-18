@@ -1,5 +1,23 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" ValidateRequest="False" Inherits="post" Codebehind="post.aspx.cs" %>
 <%@ Register Src="User controls/CommentView.ascx" TagName="CommentView" TagPrefix="uc" %>
+
+
+<asp:Content ID="Content3" ContentPlaceHolderID="cphBreadcrumbs" Runat="Server">
+          <asp:placeholder runat="server" id="phPostNavigation" visible="false">
+              
+                          <nav id="breadcrumbs1" class="breadcrumbs lw">
+                
+                    <div id="postnavigation">
+      <asp:hyperlink runat="server" id="hlNext" CssClass="nav-next" /> | <asp:hyperlink runat="server" id="hlPrev" CssClass="nav-prev" />
+    </div>
+
+            </nav>
+
+
+  </asp:placeholder>
+</asp:Content>
+
+
 <asp:content id="Content1" contentplaceholderid="cphBody" runat="Server">
   
   <asp:PlaceHolder ID="phCommentNotificationUnsubscription" runat="server" visible="false">
@@ -8,13 +26,7 @@
         <div><%= Resources.labels.commentNotificationUnsubscriptionText %></div>
     </div>
   </asp:PlaceHolder>
-
-  <asp:placeholder runat="server" id="phPostNavigation" visible="false">
-    <div id="postnavigation">
-      <asp:hyperlink runat="server" id="hlNext" CssClass="nav-next" /> | <asp:hyperlink runat="server" id="hlPrev" CssClass="nav-prev" />
-    </div>
-  </asp:placeholder>
-  
+     
   <asp:placeholder runat="server" id="pwPost" />
   
   <asp:placeholder runat="server" id="phRDF">

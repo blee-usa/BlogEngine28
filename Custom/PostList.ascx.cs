@@ -212,11 +212,13 @@ namespace BlogEngine.Web.Custom
         /// <returns></returns>
         private bool ShowExcerpt()
         {
+           
             string url = this.Request.RawUrl.ToUpperInvariant();
             bool tagOrCategory = url.Contains("/CATEGORY/") || url.Contains("?TAG=/");
 
             return BlogSettings.Instance.ShowDescriptionInPostList ||
                 (BlogSettings.Instance.ShowDescriptionInPostListForPostsByTagOrCategory && tagOrCategory);
+            
         }
 
         #endregion

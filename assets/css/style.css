@@ -90,9 +90,23 @@ body {
 	padding: 				0; 
 	font-family: 			"Segoe UI", "Lucida Grande", "Helvetica Neue", sans-serif;
 	font-size: 				15px;
-	opacity: 				1; 
+    background-image: url("/assets/images/bg3.jpg");
+
 }
 
+/*
+#bodybg {
+    background-image: url("/assets/images/bg3.jpg");
+    opacity: .8;
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2618px;
+    height: 3928px
+}
+*/
 
 
 
@@ -422,12 +436,13 @@ pre {
 
 #banner {
 	position: 				relative;
+    background-color: white;
 }
 
 #logo-area {
 	margin-left: 			20px;
   	margin-top: 			10px;
-    background: transparent url("/assets/images/logo14.png") 0px 0px no-repeat;
+    /* background: transparent url("/assets/images/logo14.png") 0px 0px no-repeat; */
 }
 
 @media only screen and (max-width: 959px) {
@@ -437,20 +452,139 @@ pre {
 	}
 }
 
+#container {
+    -moz-box-sizing: content-box;
+    border: 1px solid #DDDDDD;
+    box-shadow: 0 0 30px -20px #999999;
+    display: table;
+    margin: 0 auto;
+    background: none repeat scroll 0 0 white;
+}
 
+
+#topContainer {
+    background-color: #0090D3;
+    height: 40px;
+}
+
+/* line 8, ../sass/partials/_layout.scss */
+div#topContainer > div {
+  margin: 0 auto;
+}
+/* line 10, ../sass/partials/_layout.scss */
+div#topContainer > div ul {
+  float: right;
+  list-style: none outside none;
+    margin: 0;
+}
+/* line 12, ../sass/partials/_layout.scss */
+div#topContainer > div ul li {
+  float: left;
+}
+/* line 14, ../sass/partials/_layout.scss */
+div#topContainer > div ul li a.icon {
+  background: none;
+  filter: none;
+  border-right: solid 1px #59789e;
+  padding-right: 5px;
+  margin-right: 0px;
+}
+/* line 20, ../sass/partials/_layout.scss */
+div#topContainer > div ul li a.icon span {
+  text-indent: -9999px;
+  display: block;
+}
+/* line 26, ../sass/partials/_layout.scss */
+div#topContainer > div ul li:last-child a {
+  border: none;
+}
+
+/* line 48, ../sass/partials/_buttons.scss */
+a.icon {
+  display: block;
+  float: left;
+  width: 35px;
+  height: 30px;
+  padding: 0px;
+  margin: 5px;
+  background-color: #31598a;
+    cursor: pointer;
+    background-image: -o-linear-gradient(top, #315989, #233e61);
+}
+/* line 62, ../sass/partials/_buttons.scss */
+a.icon span {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-image: url(/assets/i/button-icons.png);
+  background-repeat: no-repeat;
+}
+/* line 71, ../sass/partials/_buttons.scss */
+a.icon.dark {
+  background: none;
+  filter: none;
+}
+/* line 74, ../sass/partials/_buttons.scss */
+a.icon.dark span {
+  background-image: url(/assets/main/i/button-icons-dark.png);
+  background-repeat: no-repeat;
+}
+/* line 81, ../sass/partials/_buttons.scss */
+a.icon.facebook span {
+  background-position: 0px 0px;
+}
+/* line 84, ../sass/partials/_buttons.scss */
+a.icon.twitter span {
+  background-position: 0px -30px;
+}
+/* line 87, ../sass/partials/_buttons.scss */
+a.icon.googleplus span {
+  background-position: 0px -60px;
+}
+/* line 90, ../sass/partials/_buttons.scss */
+a.icon.youtube span {
+  background-position: 0px -90px;
+}
+/* line 93, ../sass/partials/_buttons.scss */
+a.icon.yelp span {
+  background-position: 0px -120px;
+}
+/* line 96, ../sass/partials/_buttons.scss */
+a.icon.pinterest span {
+  background-position: 0px -150px;
+}
+/* line 99, ../sass/partials/_buttons.scss */
+a.icon.foursquare span {
+  background-position: 0px -180px;
+}
+/* line 102, ../sass/partials/_buttons.scss */
+a.icon.linkedin span {
+  background-position: 0px -210px;
+}
+/* line 105, ../sass/partials/_buttons.scss */
+a.icon.email span {
+  background-position: 0px -240px;
+}
+/* line 108, ../sass/partials/_buttons.scss */
+a.icon.blog span {
+  background-position: 0px -270px;
+}
 
 #main 	{ 
-	padding: 				30px 0;
+	padding: 				10px 0;
+    background-color: white;
 }
 
 
 #widgetarea-one {  
 	padding: 				0 20px;
+        background-color: white;
 }	
 
 
 #content{ 
 	padding: 				0 20px;
+    background-color: white;
 }
 
 
@@ -991,7 +1125,6 @@ p.post-pagination a {
 .widget li:hover { 
   	background: 			#f7f7f7 
 }
-
 
 .widget_categories > ul > li, 
 .widget_archive li, 
@@ -2074,3 +2207,53 @@ a.rsscommentslink {
 * html .lw {
 	  height: 1%;	 
 	}
+/* CUSTOM */
+aside.rounded {
+    border-color: #0090D3;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 3px;
+    padding: 10px;
+    background-color: white;
+    margin-top: 30px;
+}
+
+ul.recentPosts span {
+    display: none
+}
+
+img.about {
+    border-color: #6297BC;
+    border-width: 2px;
+    float: right;
+    margin: 12px 15px 5px 5px;
+    width: 75px;
+}
+
+/* additional classes */
+
+.green {	color: #9EC630; }
+.gray  {	color: #BFBFBF; }
+.blue  {	color: #6297BC; }
+
+blockquote {
+	margin: 15px;
+ 	padding: 0 0 0 20px;  	
+  	background: #FAFAFA;
+	border: 1px solid #f2f2f2; 
+	border-left: 4px solid #4284B0;   
+	color: #4284B0;
+	font: bold 1.2em/1.5em Georgia, 'Bookman Old Style', Serif; 
+}
+
+dl dt a {
+    background: none repeat scroll 0 0 #F2F2F2;
+    border-left: 4px solid #CCCCCC;
+    color: #333333;
+    display: block;
+    font-weight: bold;
+    min-height: 12px;
+    padding: 2px 5px 2px 10px;
+    text-decoration: none;
+}
+
