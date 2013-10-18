@@ -27,6 +27,10 @@ public partial class _default : BlogEngine.Core.Web.Controls.BlogBasePage
 		{
 			DisplayAuthors();
 		}
+        else if (Request.RawUrl.ToLowerInvariant().Contains("/page/"))
+        {
+            var obj = this.GetDataItem();
+        }
 		else if (Request.RawUrl.ToLowerInvariant().Contains("?tag="))
 		{
 			DisplayTags();

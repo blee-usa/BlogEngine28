@@ -1,5 +1,17 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="archive" EnableViewState="false" Codebehind="archive.aspx.cs" %>
 
+<asp:content id="Content3" contentplaceholderid="cphBreadcrumbs" runat="Server">
+    
+                            <nav id="breadcrumbs1" class="breadcrumbs lw">
+                
+                
+                <ol>
+                    <li class="bc-home"><a href="~">&nbsp;</a></li>
+                    <li><span class="bc-current">Archive</span></li>
+                </ol>
+            </nav>
+
+</asp:content>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphBody" Runat="Server">
   <div id="archive">
     <h1><%=Resources.labels.archive %></h1>
