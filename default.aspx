@@ -12,9 +12,9 @@
         <asp:View runat="server" ID="View0">
             <div class="slider-wrapper theme-default">
                 <div id="slider" class="nivoSlider">
-                    <a href="/post/2013/03/14/Five-Minute-Fridays-Rest.aspx"><img src="/pics/slides/bench960x320.JPG" title="#slide1" /></a>
-                    <a href="#"><img src="/pics/slides/fallenLeafLake960x320.JPG" title="#slide2" /></a>
-                    <a href="/post/Receiving-Gods-love-changes-you-from-the-inside-out.aspx"><img src="/pics/slides/cloads960x320.JPG" title="#slide3" /></a>
+                    <a href="/post/2013/03/14/Five-Minute-Fridays-Rest.aspx"><img src="/assets/i/slides/bench960x320.JPG" title="#slide1" /></a>
+                    <a href="/post/2012/08/21/Gifting-God-Prayer.aspx"><img src="/assets/i/slides/fallenLeafLake960x320.JPG" title="#slide2" /></a>
+                    <a href="/post/Receiving-Gods-love-changes-you-from-the-inside-out.aspx"><img src="/assets/i/slides/cloads960x320.JPG" title="#slide3" /></a>
                 </div>
            </div>
             <div id="slide1" class="nivo-html-caption">

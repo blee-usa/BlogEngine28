@@ -430,8 +430,7 @@ pre {
 
 #logo-area {
 	margin-left: 			20px;
-  	margin-top: 			10px;
-    /* background: transparent url("/assets/images/logo14.png") 0px 0px no-repeat; */
+  	margin-top: 			10px
 }
 
 @media only screen and (max-width: 959px) {
