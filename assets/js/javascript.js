@@ -213,7 +213,7 @@ $('#menu1').mobileMenu({
  *  SPLIT TITLES
  ******************************/
 /* Split titles: 2-color titles for site-, post- and widget titles 	*/
-$('#sitetitle a, .hentry h2 a[rel=bookmark], .hentry h1 a[rel=bookmark], .image-attachment h1, .widget h3 span').each( function() {
+$('#sitetitle a, .hentry h2 a[rel=bookmark], .hentry h1 a[rel=bookmark], .image-attachment h1, .widget h3 span').each(function () {
 	var str = $(this).text();
 	if( str.indexOf(' ') > 0 ) { var space = ' '; } 
 	else { var space = ''; }

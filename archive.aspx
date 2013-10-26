@@ -6,15 +6,15 @@
                 
                 
                 <ol>
-                    <li class="bc-home"><a href="~">&nbsp;</a></li>
+                    <li class="bc-home"><a href="/">&nbsp;</a></li>
                     <li><span class="bc-current">Archive</span></li>
                 </ol>
             </nav>
 
 </asp:content>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphBody" Runat="Server">
-  <div id="archive">
-    <h1><%=Resources.labels.archive %></h1>
+  <div id="archive" class="hentry">
+    <h1><span><%=Resources.labels.archive %></span></h1>
     <ul runat="server" id="ulMenu" />
     <asp:placeholder runat="server" id="phArchive" />
     <br />

@@ -1,7 +1,22 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="page" Codebehind="page.aspx.cs" %>
 <%@ Import Namespace="BlogEngine.Core"%>
+
+<asp:content id="Content3" contentplaceholderid="cphBreadcrumbs" runat="Server">
+    
+                            <nav id="breadcrumbs1" class="breadcrumbs lw">
+                
+                
+                <ol>
+                    <li class="bc-home"><a href="/">&nbsp;</a></li>
+                    <li><span class="bc-current"><%=h1Title.InnerText%></span></li>
+                </ol>
+            </nav>
+
+</asp:content>
+
+
 <asp:content id="Content1" contentplaceholderid="cphBody" runat="Server">
-  <div id="page">
+  <div id="page" class="hentry">
     <h1 runat="server" id="h1Title" />
     <div runat="server" id="divText" />    
     <%=AdminLinks %>

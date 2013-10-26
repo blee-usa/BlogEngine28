@@ -7,33 +7,33 @@
                 
                 
                 <ol>
-                    <li class="bc-home"><a href="~">&nbsp;</a></li>
-                    <li><span class="bc-current">Archive</span></li>
+                    <li class="bc-home"><a href="/">&nbsp;</a></li>
+                    <li><span class="bc-current">Contact</span></li>
                 </ol>
             </nav>
 </asp:content>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphBody" Runat="Server">
   <div id="contact">
-    <div id="divForm" runat="server">
+    <div id="divForm" runat="server" class="hentry">
       <h1><%=Resources.labels.contact %></h1>
       
-      <div><%=BlogSettings.Instance.ContactFormMessage %></div>
+      <p>I would love to hear from you!</p>
       
-      <label for="<%=txtName.ClientID %>"><%=Resources.labels.name %></label>
+      <label for="<%=txtName.ClientID %>"><%=Resources.labels.name %></label><br/>
       <asp:TextBox runat="server" id="txtName" cssclass="field" />
       <asp:requiredfieldvalidator runat="server" controltovalidate="txtName" ErrorMessage="<%$Resources:labels, required %>" validationgroup="contact" /><br />
       
-      <label for="<%=txtEmail.ClientID %>"><%=Resources.labels.email %></label>
+      <label for="<%=txtEmail.ClientID %>"><%=Resources.labels.email %></label><br/>
       <asp:TextBox runat="server" id="txtEmail" cssclass="field" />
       <asp:RegularExpressionValidator runat="server" ControlToValidate="txtEmail" display="dynamic" ErrorMessage="<%$Resources:labels, enterValidEmail %>" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" validationgroup="contact" />
       <asp:requiredfieldvalidator runat="server" controltovalidate="txtEmail" ErrorMessage="<%$Resources:labels, required %>" validationgroup="contact" /><br />
       
-      <label for="<%=txtSubject.ClientID %>"><%=Resources.labels.subject %></label>
+      <label for="<%=txtSubject.ClientID %>"><%=Resources.labels.subject %></label><br/>
       <asp:TextBox runat="server" id="txtSubject" cssclass="field" />
       <asp:requiredfieldvalidator runat="server" controltovalidate="txtSubject" ErrorMessage="<%$Resources:labels, required %>" validationgroup="contact" /><br />
       
-      <label for="<%=txtMessage.ClientID %>"><%=Resources.labels.message %></label>
+      <label for="<%=txtMessage.ClientID %>"><%=Resources.labels.message %></label><br/>
       <asp:TextBox runat="server" id="txtMessage" textmode="multiline" rows="5" columns="30" />
       <asp:requiredfieldvalidator runat="server" controltovalidate="txtMessage" ErrorMessage="<%$Resources:labels, required %>" display="dynamic" validationgroup="contact" />    
       
