@@ -10,22 +10,23 @@
     
     <asp:MultiView runat="server" ID="mvBreadcrumbs">
         <asp:View runat="server" ID="View0">
-        <ul class="bxslider">
-            <li><a href="/post/2013/03/14/Five-Minute-Fridays-Rest.aspx"><img style="position: relative; " src="/pics/slides/bench920x320.JPG" />
-                <div style="position: absolute;  top: 20px; left: 20px; background-color: white; width: 20%;">
-                    <h1 style="color: #9EC630">Rest</h1><p style="font-size: 18px; padding: 8px">Cease striving and know that I am God.<br/> -Psalm 46:10</p>
-                </div></a>
-            </li>
-          <li><a href=""><img style="position: relative; " src="/pics/slides/fallenLeafLake920x320.JPG" /><div style="position: absolute; 
- background-color: white; top: 20px; left: 20px; width: 25%"><h1 style="color: #9EC630">Reflect</h1><p style="font-size: 18px; padding: 8px">Tie a ribbon of remembrance around my heart, so that I often recall
-
-those sacred places where you have made yourself known...</p></div></a></li>
-          <li><a href="/post/Receiving-Gods-love-changes-you-from-the-inside-out.aspx"><img style="position: relative; " src="/pics/slides/cloads920x320.JPG" /><div style="position: absolute; 
-           top: 20px; background-color: white;
-           left: 20px; 
-           width: 20%;"><h1 style="color: #9EC630">Renew</h1><p style="font-size: 18px; padding: 8px">Real change can only come from the inside-out...</p></div></a></li>
-        </ul>
-            
+            <div class="slider-wrapper theme-default">
+                <div id="slider" class="nivoSlider">
+                    <a href="/post/2013/03/14/Five-Minute-Fridays-Rest.aspx"><img src="/pics/slides/bench960x320.JPG" title="#slide1" /></a>
+                    <a href="#"><img src="/pics/slides/fallenLeafLake960x320.JPG" title="#slide2" /></a>
+                    <a href="/post/Receiving-Gods-love-changes-you-from-the-inside-out.aspx"><img src="/pics/slides/cloads960x320.JPG" title="#slide3" /></a>
+                </div>
+           </div>
+            <div id="slide1" class="nivo-html-caption">
+                <h1>Rest</h1> <p>Cease striving and know that I am God.<br/> -Psalm 46:10</p>
+            </div>
+            <div id="slide2" class="nivo-html-caption">
+                <h1>Reflect</h1> <p>Tie a ribbon of remembrance around my heart, so that I often recall
+those sacred places where you have made yourself known.</p>
+            </div>
+                        <div id="slide3" class="nivo-html-caption">
+                <h1>Renew</h1> <p>Real change can only come from the inside-out.</p>
+            </div>            
    </asp:View>
         <asp:View runat="server" ID="View1">
             
@@ -80,21 +81,12 @@ those sacred places where you have made yourself known...</p></div></a></li>
 
 <asp:content id="Content2" contentplaceholderid="cphBodyScript" runat="Server">
     <script>
-
-        
-        $(document).ready(function () {
-            $('.bxslider').bxSlider({
-                auto: true,
-                autoControls: true,
-                controls: false,
-                pause: 6000
-                /* easing: "easeOutCirc",
-                 speed: 2000 */
-            });
+        $('#slider').nivoSlider({
+            effect: 'fade'
+            
         });
-
-
     </script>
+
 </asp:content>
 
 
