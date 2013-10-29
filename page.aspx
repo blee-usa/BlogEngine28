@@ -17,7 +17,7 @@
 
 <asp:content id="Content1" contentplaceholderid="cphBody" runat="Server">
   <div id="page" class="hentry">
-    <h1 runat="server" id="h1Title" />
+    <h1 runat="server" id="h1Title" class="title" />
     <div runat="server" id="divText" />    
     <%=AdminLinks %>
     

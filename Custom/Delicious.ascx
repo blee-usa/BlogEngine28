@@ -13,7 +13,7 @@
 </asp:Repeater>
 
 
-<asp:LinkButton ID="lbMore" runat="server" onclick="lbMore_Click">[More]</asp:LinkButton>
+<asp:LinkButton ID="lbMore" runat="server" onclick="lbMore_Click" Visible="False">[More]</asp:LinkButton>
 
 <asp:HiddenField runat="server" ID="hfCount" Value="5" />
    

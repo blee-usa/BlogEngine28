@@ -16,7 +16,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="cphBody" Runat="Server">
   <div id="contact">
     <div id="divForm" runat="server" class="hentry">
-      <h1><%=Resources.labels.contact %></h1>
+      <h1 class="title"><%=Resources.labels.contact %></h1>
       
       <p>I would love to hear from you!</p>
       

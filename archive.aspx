@@ -14,7 +14,7 @@
 </asp:content>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphBody" Runat="Server">
   <div id="archive" class="hentry">
-    <h1><span><%=Resources.labels.archive %></span></h1>
+    <h1 class="title"><span><%=Resources.labels.archive %></span></h1>
     <ul runat="server" id="ulMenu" />
     <asp:placeholder runat="server" id="phArchive" />
     <br />
