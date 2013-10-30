@@ -1052,7 +1052,7 @@
     <Content Include="Scripts\Auto\blog.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
-    <None Include="Properties\PublishProfiles\SoulStopsBE28.pubxml" />
+    <None Include="Properties\PublishProfiles\SoulStops_BE28.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
