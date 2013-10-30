@@ -9,11 +9,11 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-
+    <link rel="shortcut icon" href="~/assets/i/soulstops.ico" type="image/x-icon"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Soul Stops &larr; Renew Your Mind &amp; Spirit</title>
+    <title></title>
     <link rel="profile" href="http://gmpg.org/xfn/11" />
 
     <link rel="stylesheet" type="text/css" media="all" href='~/assets/css/style.css' />
@@ -67,7 +67,7 @@
             <li class="delicious button-wrap"><a href="#">Delicious</a></li>
 
             <!-- Google -->
-            <li class="google button-wrap"><a href="#">Plus Share</a></li>
+            <li class="google button-wrap"><a href="#">Google+</a></li>
 
             <!-- Email -->
             <li class="email button-wrap"><a href="#">Email</a></li>
@@ -192,10 +192,6 @@
                     <h3><span>Categories</span>
                     </h3>
                                     
-                                                        <div class="searchform">
-                        <asp:TextBox ID="tbSearch" CssClass="field" runat="server" MaxLength="100" OnTextChanged="tbSearch_TextChanged"
-                             placeholder="search"></asp:TextBox>
-                    </div><br/>
 
                     <blog:CategoryList ID="CategoryList1" ShowRssIcon="false" runat="Server" />
 

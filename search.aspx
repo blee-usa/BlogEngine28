@@ -1,8 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" EnableViewState="false" Inherits="search" ValidateRequest="false" Codebehind="search.aspx.cs" %>
 <%@ Import Namespace="BlogEngine.Core" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphBody" Runat="Server">
-  <div class="searchpage post">
-    <h1 runat="server" id="h1Headline" />
+  <div class="searchpage post hentry">
+    <h1 runat="server" id="h1Headline" class="title"/>
     <br />
     
     <div id="searchpage">
