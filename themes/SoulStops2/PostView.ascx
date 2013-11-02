@@ -14,5 +14,35 @@
 			<div class="post-bodycopy cf">
                 <%=Post.Content.Trim() %>
 			</div>
+
+
+         
+            <div id="share-wrapper" class="rounded cf">
+                 <h3 style="float: left; margin: 10px">Pass it on:</h3>
+        <ul class="share-inner-wrp">
+            <!-- Facebook -->
+            <li class="facebook button-wrap"><a href="#" style="color: transparent;">share</a></li>
+
+            <!-- Twitter -->
+            <li class="twitter button-wrap"><a href="#">share</a></li>
+
+            <!-- Digg -->
+            <li class="digg button-wrap"><a href="#">share</a></li>
+
+            <!-- Stumbleupon -->
+            <li class="stumbleupon button-wrap"><a href="#">share</a></li>
+
+            <!-- Delicious -->
+            <li class="delicious button-wrap"><a href="#">share</a></li>
+
+            <!-- Google -->
+            <li class="google button-wrap"><a href="#">share</a></li>
+
+            <!-- Email -->
+            <li class="email button-wrap"><a href="#">share</a></li>
+        </ul>
+    </div>
+
+
 </div>  
 

@@ -48,34 +48,6 @@
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200" />
 </head>
 <body class="home blog">
-    <div id="floating-bar"></div>
-    <div id="share-wrapper">
-        <ul class="share-inner-wrp">
-            <!-- Facebook -->
-            <li class="facebook button-wrap"><a href="#">Facebook</a></li>
-
-            <!-- Twitter -->
-            <li class="twitter button-wrap"><a href="#">Tweet</a></li>
-
-            <!-- Digg -->
-            <li class="digg button-wrap"><a href="#">Digg it</a></li>
-
-            <!-- Stumbleupon -->
-            <li class="stumbleupon button-wrap"><a href="#">Stumbleupon</a></li>
-
-            <!-- Delicious -->
-            <li class="delicious button-wrap"><a href="#">Delicious</a></li>
-
-            <!-- Google -->
-            <li class="google button-wrap"><a href="#">Google+</a></li>
-
-            <!-- Email -->
-            <li class="email button-wrap"><a href="#">Email</a></li>
-        </ul>
-    </div>
-
-
-
     <form id="form1" runat="server">
         <div id="banner-bg" class="cf">
             <div id="banner" class="row">
