@@ -2233,7 +2233,14 @@ div.searchresult {
 }
 
 #PostPager li.active {
-    border-color: #0090d3;
+    background-color: #5C80B1;
+    border: 1px solid #CCCCCC;
+    color: #FFFFFF !important;
+    padding: 2px 5px;
+}
+
+#PostPager li.active a {
+    color: #FFFFFF !important;
 }
 
 /* Share button */
