@@ -189,6 +189,7 @@ public partial class search : BlogEngine.Core.Web.Controls.BlogBasePage
 
 		HtmlGenericControl ul = new HtmlGenericControl("ul");
 		ul.Attributes.Add("class", "paging");
+        ul.Attributes.Add("id", "PostPager");
         string q = Server.HtmlEncode(Request.QueryString["q"]);
         string comment = Request.QueryString["comment"];
 

@@ -2114,7 +2114,7 @@ img.about {
 
 .green {	color: #9EC630; }
 .gray  {	color: #BFBFBF; }
-.blue  {	color: #6297BC; }
+.blue  {	color: #0090D3; }
 
 blockquote {
 	margin: 15px;
@@ -2163,7 +2163,7 @@ margin: 0px;
     padding: 5px;
 }
 
-.button {
+a.button {
 display: inline-block;
 text-decoration: none;
 font-size: large;
@@ -2171,13 +2171,19 @@ font-size: large;
 -webkit-border-radius: 3px;
 -khtml-border-radius: 3px;
 border-radius: 3px;
-color: #ffffff;
-background: #0090d3;
+color: #ffffff !important; 
+background: #0090d3 !important;
 padding: 2px;
 border: none;
-    margin-left: 2px;
+margin-left: 2px;
+width: 80%;
+text-align: center;
+}
 
-
+a.button:hover
+{
+    color: #ffffff !important; 
+background: #0090d3 !important;
 }
 
 
@@ -2221,63 +2227,13 @@ a.icon {
   margin: 5px;
     cursor: pointer;
 }
-/* line 62, ../sass/partials/_buttons.scss */
-a.icon span {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  background-image: url(/assets/i/button-icons.png);
-  background-repeat: no-repeat;
+
+div.searchresult {
+    margin: 10px 0 0 0;
 }
-/* line 71, ../sass/partials/_buttons.scss */
-a.icon.dark {
-  background: none;
-  filter: none;
-}
-/* line 74, ../sass/partials/_buttons.scss */
-a.icon.dark span {
-  background-image: url(/assets/main/i/button-icons-dark.png);
-  background-repeat: no-repeat;
-}
-/* line 81, ../sass/partials/_buttons.scss */
-a.icon.facebook span {
-  background-image: url(/assets/i/Facebook-32.png);
-}
-/* line 84, ../sass/partials/_buttons.scss */
-a.icon.twitter span {
-  background-position: 0px -30px;
-}
-/* line 87, ../sass/partials/_buttons.scss */
-a.icon.googleplus span {
-  background-position: 0px -60px;
-}
-/* line 90, ../sass/partials/_buttons.scss */
-a.icon.youtube span {
-  background-position: 0px -90px;
-}
-/* line 93, ../sass/partials/_buttons.scss */
-a.icon.yelp span {
-  background-position: 0px -120px;
-}
-/* line 96, ../sass/partials/_buttons.scss */
-a.icon.pinterest span {
-  background-position: 0px -150px;
-}
-/* line 99, ../sass/partials/_buttons.scss */
-a.icon.foursquare span {
-  background-position: 0px -180px;
-}
-/* line 102, ../sass/partials/_buttons.scss */
-a.icon.linkedin span {
-  background-position: 0px -210px;
-}
-/* line 105, ../sass/partials/_buttons.scss */
-a.icon.email span {
-  background-position: 0px -240px;
-}
-/* line 108, ../sass/partials/_buttons.scss */
-a.icon.blog span {
-  background-position: 0px -270px;
+
+#PostPager li.active {
+    border-color: #0090d3;
 }
 
 /* Share button */

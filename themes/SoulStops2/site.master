@@ -171,19 +171,17 @@
 
                 <aside class="widget widget_links">
                     <h3><span>Free to your inbox.</span></h3>
+                        <p>Sign up to receive new posts about finding the God-beauty and joy in the daily mess of life.</p>
+                    <div id="signup">
+                           <a href="http://eepurl.com/H6rMX" class="button">Subscribe Here</a>
+                    </div>
+                 
+                    
 
 
 
 
-<form action="http://soulstops.us5.list-manage1.com/subscribe/post?u=035eb92a4e5201ddbcdd5a9a3&amp;id=e1fabd400e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    <label for="mce-EMAIL" style="font-size: medium"></label>
-    <p>Sign up to receive new posts about finding the God-beauty and joy in the daily mess of life.</p>
-	<div class="cf">
-	    <div style="float: left"> <input type="email" value="" style="padding: 5px" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required /></div>
-	    <div style="float: left"> <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" /></div>
-      </div>
-    	
-</form>
+
          
 
                 </aside>
@@ -192,7 +190,10 @@
                     <h3><span>Categories</span>
                     </h3>
                                     
-
+     <div class="searchform">
+                    <asp:TextBox ID="tbSearch" CssClass="field" runat="server" MaxLength="100" Text="search" OnTextChanged="tbSearch_TextChanged"
+                        onblur="if(this.value==''){this.value='search'}" onfocus="if(this.value=='search'){this.value=''}"></asp:TextBox>
+                </div>
                     <blog:CategoryList ID="CategoryList1" ShowRssIcon="false" runat="Server" />
 
                 </aside>
@@ -285,10 +286,6 @@
 
     <asp:ContentPlaceHolder ID="cphBodyScript" runat="server">
     </asp:ContentPlaceHolder>
-
-
-
-
 </body>
 </html>
 

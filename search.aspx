@@ -1,5 +1,19 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" EnableViewState="false" Inherits="search" ValidateRequest="false" Codebehind="search.aspx.cs" %>
 <%@ Import Namespace="BlogEngine.Core" %>
+
+<asp:content id="Content3" contentplaceholderid="cphBreadcrumbs" runat="Server">
+    
+                            <nav id="breadcrumbs1" class="breadcrumbs lw">
+                
+                
+                <ol>
+                    <li class="bc-home"><a href="/">&nbsp;</a></li>
+                    <li><span class="bc-current">Search</span></li>
+                </ol>
+            </nav>
+
+</asp:content>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="cphBody" Runat="Server">
   <div class="searchpage post hentry">
     <h1 runat="server" id="h1Headline" class="title"/>
