@@ -577,11 +577,12 @@ pre {
 	margin-top: 			7px;
 	margin-left: 			-6px;
 }
+  
 
 .hentry:hover .thumb-shadow { 
 	background-position: center bottom;
 }
-
+ 
 .post-thumb { 
 	margin: 					0 auto 15px auto; 
 	display: 				block; 
@@ -601,13 +602,14 @@ pre {
 }
 
 .post-thumb img {
+    /*
 	-webkit-filter: 		grayscale(0);
 	opacity: 				0; 
 	filter: 					alpha(opacity=0); 
-	-ms-filter: 			"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	-ms-filter: 			"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";*/
 	display:					block;
 }
-
+/*
 .post-thumb img.img_grayscale { 
 	filter: 					grayscale(100%); 
 	-ms-filter: 			grayscale(100%); 
@@ -617,7 +619,7 @@ pre {
 	-webkit-filter: 		grayscale(1); 
 	-webkit-filter: 		grayscale(100%); 
 }
-
+*/
 
 .post-thumb span {
 	position: 				absolute;

@@ -58,12 +58,13 @@ function bfa_img_grayscale() {
 	});
 }
 
+
 /*******************************
  *  Grayscale post thumbs
  ******************************/
 jQuery(window).load(function() {
 	if( jQuery(window).width() > 959 ) {
-		bfa_img_grayscale();
+	    /*bfa_img_grayscale();*/
 	}
 });	
 

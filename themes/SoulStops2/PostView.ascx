@@ -18,7 +18,7 @@
 
          
             <div id="share-wrapper" class="rounded cf">
-                 <h3 style="float: left; margin: 10px">Pass it on:</h3>
+                 <h4 style="float: left; margin: 10px">Share this post:</h4>
         <ul class="share-inner-wrp">
             <!-- Facebook -->
             <li class="facebook button-wrap"><a href="#" style="color: transparent;">share</a></li>
