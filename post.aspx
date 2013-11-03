@@ -6,10 +6,13 @@
           <asp:placeholder runat="server" id="phPostNavigation" visible="false">
               
                           <nav id="breadcrumbs1" class="breadcrumbs lw">
-                
-                    <div id="postnavigation">
-      <asp:hyperlink runat="server" id="hlNext" CssClass="nav-next" /> | <asp:hyperlink runat="server" id="hlPrev" CssClass="nav-prev" />
-    </div>
+                <ol>
+                    <li class="bc-home"><a href="/">&nbsp;</a></li>
+                    <li>             
+      <asp:hyperlink runat="server" id="hlNext" CssClass="nav-next" /><span style='display:<%=IsVisibleDivider?"":"none"%>; font-size: large; margin-left:8px'>|</span><asp:hyperlink runat="server" id="hlPrev" CssClass="nav-prev" />
+    </li>
+                </ol>
+
 
             </nav>
 
