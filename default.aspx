@@ -34,7 +34,7 @@ those sacred places where you have made yourself known.</p>
                 
                 
                 <ol>
-                    <li class="bc-home"><a href="~">&nbsp;</a></li>
+                    <li class="bc-home"><a href="/">&nbsp;</a></li>
                     <li><span class="bc-current"><asp:Literal runat="server" ID="litCategory"></asp:Literal></span></li>
                 </ol>
             </nav>
@@ -46,7 +46,7 @@ those sacred places where you have made yourself known.</p>
                 
                 
                 <ol>
-                    <li class="bc-home"><a href="~">&nbsp;</a></li>
+                    <li class="bc-home"><a href="/">&nbsp;</a></li>
                     <li><span class="bc-current"><asp:Literal runat="server" ID="Literal1"></asp:Literal></span></li>
                 </ol>
             </nav> 
