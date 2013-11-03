@@ -1,7 +1,19 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="error404" Codebehind="error404.aspx.cs" %>
 
+<asp:content id="Content3" contentplaceholderid="cphBreadcrumbs" runat="Server">
+    
+                            <nav id="breadcrumbs1" class="breadcrumbs lw">
+                
+                
+                <ol>
+                    <li class="bc-home"><a href="/">&nbsp;</a></li>
+                    <li><span class="bc-current">Ooops!</span></li>
+                </ol>
+            </nav>
+</asp:content>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="cphBody" Runat="Server">
-  <div class="post error404">
+  <div class="post error404 hentry">
     <h1>Ooops! I can't find the page you're looking for</h1>
     <div id="divSearchEngine" runat="server" visible="False" class="search">
       <p>

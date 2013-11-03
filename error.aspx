@@ -1,7 +1,19 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="error_occurred" Codebehind="error.aspx.cs" %>
 
+
+<asp:content id="Content3" contentplaceholderid="cphBreadcrumbs" runat="Server">
+    
+                            <nav id="breadcrumbs1" class="breadcrumbs lw">
+                
+                
+                <ol>
+                    <li class="bc-home"><a href="/">&nbsp;</a></li>
+                    <li><span class="bc-current">Ooops!</span></li>
+                </ol>
+            </nav>
+</asp:content>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphBody" Runat="Server">
-  <div class="post">
+  <div class="post hentry">
     <h1>Ooops! An unexpected error has occurred.</h1>
     
     <div>
