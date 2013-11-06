@@ -5,6 +5,8 @@
 <%@ Register Src="../../Custom/Quotes.ascx" TagName="Quotes" TagPrefix="uc3" %>
 <%@ Register Src="../../Custom/Delicious.ascx" TagName="Delicious" TagPrefix="uc4" %>
 
+<%@ Register src="../../admin/menu.ascx" tagname="menu" tagprefix="uc5" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -137,7 +139,19 @@
                 </aside>
                 
                 
+                <% if (Page.User.Identity.IsAuthenticated)
+                       { %> 
+                                <aside class="widget widget_meta cf">
+                    
+                    <h3><span>Admin</span></h3>
 
+                    <uc5:menu ID="menu2" runat="server" />
+                    <ul>
+                        <li><a href="/Account/login.aspx?logoff">Log out</a></li>
+                    </ul>
+
+                </aside>
+                    <%} %>  
 
                 <aside class="widget widget_links">
                     <h3><span>Free to your inbox.</span></h3>
@@ -163,7 +177,7 @@
      <div class="searchform">
                     <asp:TextBox ID="tbSearch" CssClass="field" runat="server" MaxLength="100" Text="search" OnTextChanged="tbSearch_TextChanged"
                         onblur="if(this.value==''){this.value='search'}" onfocus="if(this.value=='search'){this.value=''}"></asp:TextBox>
-                </div>
+                </div><br/>
                     <blog:CategoryList ID="CategoryList1" ShowRssIcon="false" runat="Server" />
 
                 </aside>
@@ -191,12 +205,6 @@
 
                 </aside>
                 
-                                  <aside id="search-2" class="widget widget_search cf">
-
-
-                </aside>
-                
-
 
                 <aside class="widget widget_recent_comments cf">
                     <h3><span>Recent Comments</span></h3>
@@ -235,20 +243,35 @@
 
 
                 </aside>
+                
 
             </div>
 
-        </div>
-        <div id="endShare"></div>
+
         <div id="footer-bg">
             <div id="footer" class="lw">
 
-                <p>&copy; 2013 Soul Stops &mdash; All Rights Reserved.</p>
+                <p>&copy; 2013 Soul Stops &mdash; All Rights Reserved.
+                    
+                   <% if (Page.User.Identity.IsAuthenticated)
+                       { %> |
+                  <a href="/Account/login.aspx?logoff">Log out</a>
+                    <%}
+                      else
+                      {%>
+                    | <a href="/admin">Log in</a>
+                       <%}  
+                    
+                      %>
+
+                </p> 
+
 
 
             </div>
 
 
+        </div>
         </div>
 
 
