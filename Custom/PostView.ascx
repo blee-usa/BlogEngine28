@@ -1,8 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PostView.ascx.cs" Inherits="BlogEngine.Web.Custom.PostView" %>
 
-<div id="startShare"></div>
 <div class="post cf hentry">
-  <div id="floating-bar"></div>
+
 	<h2>
 		<span class="post-format"></span>
 		<a href="<%=Post.RelativeLink %>" title="<%=Post.Title%>" rel="bookmark"><%=Post.Title%></a>

@@ -13,7 +13,7 @@ using System.Collections.Generic;
 
 public partial class post : BlogEngine.Core.Web.Controls.BlogBasePage
 {
-
+    public bool IsVisibleDivider = false;
     protected override void OnInit(EventArgs e)
     {
         base.OnInit(e);
@@ -139,7 +139,14 @@ public partial class post : BlogEngine.Core.Web.Controls.BlogBasePage
 	private Post GetNextPost(Post post)
 	{
 		if (post.Next == null)
-			return null;
+		{
+            return null;
+		}
+		else
+		{
+		    IsVisibleDivider = true;
+		}
+			
 
 		if (post.Next.IsVisible)
 			return post.Next;
@@ -156,7 +163,8 @@ public partial class post : BlogEngine.Core.Web.Controls.BlogBasePage
 			return null;
 
 		if (post.Previous.IsVisible)
-			return post.Previous;
+            return post.Previous;  
+
 
 		return GetPrevPost(post.Previous);
 	}

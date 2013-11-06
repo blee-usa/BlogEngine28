@@ -375,10 +375,8 @@
     <Content Include="assets\i\logo232x120.png" />
     <Content Include="assets\i\slides\bench960x320.JPG" />
     <Content Include="assets\i\slides\cloads960x320.JPG" />
-    <Content Include="assets\i\slides\DSCN0994.JPG" />
     <Content Include="assets\i\slides\fallenLeafLake960x320.JPG" />
-    <Content Include="assets\i\slides\IMG_8812.JPG" />
-    <Content Include="assets\i\slides\IMG_8895.JPG" />
+    <Content Include="assets\i\slides\flowers960x320.jpg" />
     <Content Include="assets\i\soulstops.ico" />
     <Content Include="assets\i\StumbleUpon-32.png" />
     <Content Include="assets\i\Twitter-32.png" />
@@ -393,8 +391,6 @@
     <Content Include="assets\js\jquery\ui\jquery.ui.core.min.js" />
     <Content Include="assets\js\jquery\ui\jquery.ui.effect.min.js" />
     <Content Include="assets\js\jquery\ui\jquery.ui.widget.min.js" />
-    <Content Include="assets\js\libs\fshare\css\fshare.css" />
-    <Content Include="assets\js\libs\fshare\js\fshare.js" />
     <Content Include="assets\js\libs\nivo-slider\Copy of nivo-slider.css" />
     <Content Include="assets\js\libs\nivo-slider\jquery.nivo.slider.js" />
     <Content Include="assets\js\libs\nivo-slider\nivo-slider.css" />

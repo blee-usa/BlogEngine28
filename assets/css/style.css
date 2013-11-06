@@ -577,11 +577,12 @@ pre {
 	margin-top: 			7px;
 	margin-left: 			-6px;
 }
+  
 
 .hentry:hover .thumb-shadow { 
 	background-position: center bottom;
 }
-
+ 
 .post-thumb { 
 	margin: 					0 auto 15px auto; 
 	display: 				block; 
@@ -601,13 +602,14 @@ pre {
 }
 
 .post-thumb img {
+    /*
 	-webkit-filter: 		grayscale(0);
 	opacity: 				0; 
 	filter: 					alpha(opacity=0); 
-	-ms-filter: 			"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	-ms-filter: 			"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";*/
 	display:					block;
 }
-
+/*
 .post-thumb img.img_grayscale { 
 	filter: 					grayscale(100%); 
 	-ms-filter: 			grayscale(100%); 
@@ -617,7 +619,7 @@ pre {
 	-webkit-filter: 		grayscale(1); 
 	-webkit-filter: 		grayscale(100%); 
 }
-
+*/
 
 .post-thumb span {
 	position: 				absolute;
@@ -2154,8 +2156,8 @@ html {
 }
 
 div.rounded {
--moz-border-radius: 3px;
-border-radius: 3px;
+-moz-border-radius: 5px;
+border-radius: 5px;
 border-color: #9EC630;
 border-width: 3px;
 border-style: solid;
@@ -2247,35 +2249,39 @@ div.searchresult {
 
 /* outer wrapper */
 #share-wrapper {
-	margin-top: 100px;
-	position:fixed;
-    background-color: transparent;
+	/*margin-top: 100px;   */
+     background-color: transparent;
 }
 
 /* inner wrapper */
 #share-wrapper ul.share-inner-wrp{
-	list-style: none;
+    list-style: none;
 	margin: 0px;
 	padding: 0px;
+    float: left;
+    position: relative;
+    top: -5px;
 }
 
 /* the list */
 #share-wrapper li.button-wrap {
     background: transparent;
-	padding: 0px 0px 0px 10px;
-	display: block;
+	/*padding: 0px 0px 0px 10px;
+	 display: block;
 	width: 140px;
-	margin: 0px 0px 1px -105px;
+	margin: 0px 0px 1px -105px;*/
+      float: left;
+    margin-left: 2px;
 }
 
 /* share link */
 #share-wrapper li.button-wrap > a {
-	padding-right: 60px;
+	/*padding-right: 60px;*/
 	height: 32px;
 	display: block;
 	line-height: 32px;
 	font-weight: bold;
-    color: white;
+    color: transparent;
 	text-decoration: none;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
@@ -2303,42 +2309,3 @@ div.searchresult {
 #share-wrapper .email > a{
 	background: url(/assets/i/_Misc_Mail_01-32.png) no-repeat right;
 }
-
-/* small screen */
-@media all and (max-width: 768px) {
-	#share-wrapper {
-		bottom: 0;
-		position: fixed;
-		padding: 5px 5px 0px 5px;
-		background: #EBEBEB;
-		width: 100%;
-		margin: 0px;
-		-webkit-box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
-		-moz-box-shadow: 0 -1px 4px rgba(0,0,0,0.15);
-		-o-box-shadow: 0 -1px 4px rgba(0,0,0,0.15);
-		box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
-	}
-	#share-wrapper ul.share-inner-wrp {
-		list-style: none;
-		margin: 0px auto;
-		padding: 0px;
-		text-align: center;
-		overflow: auto;
-	}
-	#share-wrapper li.button-wrap {
-		display: inline-block;
-		width: 32px!important;
-		margin: 0px;
-		padding: 0px;
-		margin-left:0px!important;
-	}
-	#share-wrapper li.button-wrap > a {
-		height: 32px;
-		display: inline-block;
-		text-indent: -10000px;
-		width: 32px;
-		padding-right: 0;
-		float: left;
-	}
-}
-

@@ -14,7 +14,7 @@
                 <div id="slider" class="nivoSlider">
                     <a href="/post/2013/03/14/Five-Minute-Fridays-Rest.aspx"><img src="/assets/i/slides/bench960x320.JPG" title="#slide1" /></a>
                     <a href="/post/2012/08/21/Gifting-God-Prayer.aspx"><img src="/assets/i/slides/fallenLeafLake960x320.JPG" title="#slide2" /></a>
-                    <a href="/post/Receiving-Gods-love-changes-you-from-the-inside-out.aspx"><img src="/assets/i/slides/cloads960x320.JPG" title="#slide3" /></a>
+                    <a href="/post/Receiving-Gods-love-changes-you-from-the-inside-out.aspx"><img src="/assets/i/slides/flowers960x320.jpg" title="#slide3" /></a>
                 </div>
            </div>
             <div id="slide1" class="nivo-html-caption">
@@ -34,7 +34,7 @@ those sacred places where you have made yourself known.</p>
                 
                 
                 <ol>
-                    <li class="bc-home"><a href="~">&nbsp;</a></li>
+                    <li class="bc-home"><a href="/">&nbsp;</a></li>
                     <li><span class="bc-current"><asp:Literal runat="server" ID="litCategory"></asp:Literal></span></li>
                 </ol>
             </nav>
@@ -46,7 +46,7 @@ those sacred places where you have made yourself known.</p>
                 
                 
                 <ol>
-                    <li class="bc-home"><a href="~">&nbsp;</a></li>
+                    <li class="bc-home"><a href="/">&nbsp;</a></li>
                     <li><span class="bc-current"><asp:Literal runat="server" ID="Literal1"></asp:Literal></span></li>
                 </ol>
             </nav> 
