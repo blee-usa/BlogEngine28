@@ -32,13 +32,11 @@
     <script type='text/javascript' src='/assets/js/javascript.js?ver=3.61'></script>
 
     <script type='text/javascript' src='/assets/js/sharethis.js'></script>
-    <!-- Nevo slider  -->
-    <link rel="stylesheet" href="/assets/js/libs/fshare/css/fshare.css" type="text/css" media="screen" />
+    
 
-    <link rel="stylesheet" href="/assets/js/libs/nivo-slider/themes/default/default.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="/assets/js/libs/nivo-slider/themes/light/light.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="/assets/js/libs/nivo-slider/themes/dark/dark.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="/assets/js/libs/nivo-slider/themes/bar/bar.css" type="text/css" media="screen" />
+    <!-- Nevo slider  -->
+    <link rel="stylesheet" href="/assets/js/libs/nivo-slider/themes/default/default.css?v1" type="text/css" media="screen" />
+
     <link rel="stylesheet" href="/assets/js/libs/nivo-slider/nivo-slider.css" type="text/css" media="screen" />
     <script type="text/javascript" src="/assets/js/libs/nivo-slider/jquery.nivo.slider.js"></script>
 

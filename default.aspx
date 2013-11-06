@@ -18,7 +18,7 @@
                 </div>
            </div>
             <div id="slide1" class="nivo-html-caption">
-                <h1>Rest</h1> <p>Cease striving and know that I am God.<br/> -Psalm 46:10</p>
+                <h1><a href="/post/2013/03/14/Five-Minute-Fridays-Rest.aspx">Rest</a></h1> <p>Cease striving and know that I am God.<br/> -Psalm 46:10</p>
             </div>
             <div id="slide2" class="nivo-html-caption">
                 <h1>Reflect</h1> <p>Tie a ribbon of remembrance around my heart, so that I often recall

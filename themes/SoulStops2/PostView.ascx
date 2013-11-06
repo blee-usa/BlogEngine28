@@ -11,7 +11,7 @@
                 
                 <% if (Page.User.Identity.IsAuthenticated)
                        { %> 
-                  [<%=AdminLinks %>]
+                  [Admin: <%=AdminLinks %>]
                     <%} %>            
 			</div>
     
