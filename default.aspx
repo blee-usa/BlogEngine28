@@ -21,11 +21,11 @@
                 <h1><a href="/post/2013/03/14/Five-Minute-Fridays-Rest.aspx">Rest</a></h1> <p>Cease striving and know that I am God.<br/> -Psalm 46:10</p>
             </div>
             <div id="slide2" class="nivo-html-caption">
-                <h1>Reflect</h1> <p>Tie a ribbon of remembrance around my heart, so that I often recall
+                <h1> <a href="/post/2012/08/21/Gifting-God-Prayer.aspx">Reflect</a></h1> <p>Tie a ribbon of remembrance around my heart, so that I often recall
 those sacred places where you have made yourself known.</p>
             </div>
                         <div id="slide3" class="nivo-html-caption">
-                <h1>Renew</h1> <p>Real change can only come from the inside-out.</p>
+                <h1><a href="/post/Receiving-Gods-love-changes-you-from-the-inside-out.aspx">Renew</a></h1> <p>Real change can only come from the inside-out.</p>
             </div>            
    </asp:View>
         <asp:View runat="server" ID="View1">
