@@ -98,7 +98,7 @@ namespace BlogEngine.Web.Custom
                                 try
                                 {
                                     System.TimeSpan diffResult = dtNow.Subtract(p.DateCreated);
-                                    if (diffResult.Days < 360)
+                                    if (diffResult.Days < 60)
                                     {
                                         shortList.Add(list[i]);
                                         counter++;

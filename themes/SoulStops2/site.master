@@ -85,19 +85,7 @@
         <div id="breadcrumbs1-bg" class="row">
             <nav id="breadcrumbs1" class="breadcrumbs lw col12">
                 <asp:ContentPlaceHolder ID="cphBreadcrumbs" runat="server">
-                </asp:ContentPlaceHolder>
-                <%-- 
-
-            <nav id="breadcrumbs1" class="breadcrumbs lw">
-                
-                
-                <ol>
-                    <li class="bc-home"><a href="http://localhost:2471">&nbsp;</a></li>
-                    <li><span class="bc-current">Blog</span></li>
-                </ol>
-            </nav>
-                --%>
-            </nav>
+                </asp:ContentPlaceHolder>            </nav>
         </div>
 
         <div id="startShare"></div>
@@ -149,7 +137,7 @@
                             </li>
                         </ul>
                     </div>
-
+                    
                 </aside>
                 
                 
@@ -200,7 +188,7 @@
                 <aside class="widget widget_recent_entries cf" id="top-posts-2">
                     <h3><span>Current Favorites</span></h3>
 
-                    <uc2:RecentTopPosts ID="RecentTopPosts1" runat="server" Top="5" />
+                    <uc2:RecentTopPosts ID="RecentTopPosts1" runat="server" Top="10" />
 
 
 
@@ -213,7 +201,7 @@
 
 
 
-                    <uc1:TopPosts ID="TopPosts1" runat="server" Top="12" />
+                    <uc1:TopPosts ID="TopPosts1" runat="server" Top="10" />
 
 
 
@@ -229,26 +217,26 @@
 
 
 
-
-
-                <aside class="widget cf">
-                    <h3><span>Sponser a Child</span>
-                    </h3>
-
-                    <a href="http://www.worldvision.org/content.nsf/pages/horn-of-africa-famine-2011?open&campaign=1290087">
-                        <img src="http://blog.worldvision.org/wp-content/uploads/banners/Sfaminenomore.jpg"
-                            style="border: 0; margin-left: 10px; margin-top: 10px" width="240" height="200"
-                            alt="Famine no more"></a>
-
-
-
-                </aside>
                 <aside class="widget widget_pages">
                     <h3><span>Check 'em out!</span></h3>
+                    
+                    <a href="https://tugboatyards.com/tweetspeakpoetry#whattheheck" target="_blank"><img src="http://www.tweetspeakpoetry.com/wp-content/uploads/2013/10/Tweetspeak-Poetry-Tugboat.png"/></a>
+
+
                     <uc4:Delicious ID="Delicious1" runat="server" />
 
                 </aside>
+                                <aside class="widget cf">
+                    <h3><span>Sponser a Child</span>
+                    </h3>
 
+                    <a href="http://www.pottershouse.org.gt/" target="_blank">
+                        <img src="http://www.pottershouse.org.gt/_img/logo.png"
+                             style="border: 0; margin-left: 10px; margin-top: 10px" width="240" alt="Potter's House in Guatemala"/></a>
+
+
+
+                </aside>
                 <aside class="widget widget_recent_entries cf" id="Aside2">
                     <h3><span>Quote Quencher</span></h3>
 

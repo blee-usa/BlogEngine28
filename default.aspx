@@ -82,8 +82,8 @@ those sacred places where you have made yourself known.</p>
 <asp:content id="Content2" contentplaceholderid="cphBodyScript" runat="Server">
     <script>
         $('#slider').nivoSlider({
-            effect: 'fade'
-            
+            effect: 'fade',
+            pauseTime: 7000
         });
     </script>
 
