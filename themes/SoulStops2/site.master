@@ -107,11 +107,11 @@
 
                     <asp:Image ID="Image1" runat="server" ImageUrl="~/assets/i/blog2.jpg" CssClass="about" />
                     <p>
-                        <span class="green"><strong>Welcome! </strong></span>This blog chronicles when I
-                                have stopped to listen to God speak through the Bible, nature, music, and others.
-                                I hope that by sharing my journey, it will encourage you to let your <span class="green">
+                        <span class="green"><strong>Welcome! </strong></span> I
+                                stop to listen to God speak through the Bible, nature, music, and others.
+                                Thanks for sharing my journey. I hope you will let your <span class="green">
                                     <strong>soul</strong></span> <span class="blue"><strong>stop</strong></span>
-                        and hear God speak to you.
+                        and hear God speak love to you.
                     </p>
                     <p class="float-right">
                         ~ Dolly&nbsp;&nbsp;&nbsp;
@@ -227,7 +227,7 @@
 
                 </aside>
                                 <aside class="widget cf">
-                    <h3><span>Sponser a Child</span>
+                    <h3><span>Sponsor a Child</span>
                     </h3>
 
                     <a href="http://www.pottershouse.org.gt/" target="_blank">
