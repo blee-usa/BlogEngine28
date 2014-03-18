@@ -44,6 +44,13 @@
             <li class="email button-wrap" title="Email"><a href="#">share</a></li>
         </ul>
     </div>
+    <br/>
+    <div class="cf">
+        <a class="button" href="http://eepurl.com/H6rMX" style="float: left; width: 150px; margin-right: 5px; margin-top: 5px">Subscribe Here</a>
+        <p style="margin: 0">           
+        Sign up to receive new posts about finding the God-beauty and joy in the daily mess of life.
+        </p>
+    </div>
 
 
 </div>  

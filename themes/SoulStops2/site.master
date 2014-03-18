@@ -75,7 +75,7 @@
                     <ul id="menu1" class="cf menu">
                         <li class="page1"><a runat="server" href="~/page/About-my-blog.aspx">About</a></li>
                         <li class="page2"><a runat="server" href="~/contact.aspx">Contact</a></li>
-                        <li class="page3"><a id="A1" runat="server" href="~/page/Good-reads-and-other-musings.aspx">Good Reads</a></li>
+                        <li class="page3"><a id="A1" runat="server" href="~/page/Good-reads-and-other-musings.aspx">My Reading List</a></li>
                         <li class="page3"><a id="A2" runat="server" href="~/archive.aspx">Archive</a></li>
                     </ul>
                 </nav>
@@ -98,7 +98,15 @@
 
             <div id="widgetarea-one" class="col4" style="padding-top: 30px">
 
+                
+                <aside class="widget widget_links">
+                    <h3><span>Free to your inbox.</span></h3>
+                        <p>Sign up to receive new posts about finding the God-beauty and joy in the daily mess of life.</p>
+                    <div id="signup">
+                           <a href="http://eepurl.com/H6rMX" class="button">Subscribe Here</a>
+                    </div>              
 
+                </aside>
                 <aside id="widget-about" class="widget cf">
 
 
@@ -155,22 +163,6 @@
                 </aside>
                     <%} %>  
 
-                <aside class="widget widget_links">
-                    <h3><span>Free to your inbox.</span></h3>
-                        <p>Sign up to receive new posts about finding the God-beauty and joy in the daily mess of life.</p>
-                    <div id="signup">
-                           <a href="http://eepurl.com/H6rMX" class="button">Subscribe Here</a>
-                    </div>
-                 
-                    
-
-
-
-
-
-         
-
-                </aside>
                 
                                 <aside class="widget widget_categories cf" id="categories-2">
                     <h3><span>Categories</span>
