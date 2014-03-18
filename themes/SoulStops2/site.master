@@ -5,6 +5,8 @@
 <%@ Register Src="../../Custom/Quotes.ascx" TagName="Quotes" TagPrefix="uc3" %>
 <%@ Register Src="../../Custom/Delicious.ascx" TagName="Delicious" TagPrefix="uc4" %>
 
+<%@ Register src="../../admin/menu.ascx" tagname="menu" tagprefix="uc5" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -30,13 +32,11 @@
     <script type='text/javascript' src='/assets/js/javascript.js?ver=3.61'></script>
 
     <script type='text/javascript' src='/assets/js/sharethis.js'></script>
-    <!-- Nevo slider  -->
-    <link rel="stylesheet" href="/assets/js/libs/fshare/css/fshare.css" type="text/css" media="screen" />
+    
 
-    <link rel="stylesheet" href="/assets/js/libs/nivo-slider/themes/default/default.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="/assets/js/libs/nivo-slider/themes/light/light.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="/assets/js/libs/nivo-slider/themes/dark/dark.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="/assets/js/libs/nivo-slider/themes/bar/bar.css" type="text/css" media="screen" />
+    <!-- Nevo slider  -->
+    <link rel="stylesheet" href="/assets/js/libs/nivo-slider/themes/default/default.css?v1" type="text/css" media="screen" />
+
     <link rel="stylesheet" href="/assets/js/libs/nivo-slider/nivo-slider.css" type="text/css" media="screen" />
     <script type="text/javascript" src="/assets/js/libs/nivo-slider/jquery.nivo.slider.js"></script>
 
@@ -44,6 +44,22 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200" />
+    
+    <script type="text/javascript">
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-20543457-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function () {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+    </script>
+    
+
 </head>
 <body class="home blog">
     <form id="form1" runat="server">
@@ -59,7 +75,7 @@
                     <ul id="menu1" class="cf menu">
                         <li class="page1"><a runat="server" href="~/page/About-my-blog.aspx">About</a></li>
                         <li class="page2"><a runat="server" href="~/contact.aspx">Contact</a></li>
-                        <li class="page3"><a id="A1" runat="server" href="~/page/Good-reads-and-other-musings.aspx">Good Reads</a></li>
+                        <li class="page3"><a id="A1" runat="server" href="~/page/Good-reads-and-other-musings.aspx">My Reading List</a></li>
                         <li class="page3"><a id="A2" runat="server" href="~/archive.aspx">Archive</a></li>
                     </ul>
                 </nav>
@@ -69,19 +85,7 @@
         <div id="breadcrumbs1-bg" class="row">
             <nav id="breadcrumbs1" class="breadcrumbs lw col12">
                 <asp:ContentPlaceHolder ID="cphBreadcrumbs" runat="server">
-                </asp:ContentPlaceHolder>
-                <%-- 
-
-            <nav id="breadcrumbs1" class="breadcrumbs lw">
-                
-                
-                <ol>
-                    <li class="bc-home"><a href="http://localhost:2471">&nbsp;</a></li>
-                    <li><span class="bc-current">Blog</span></li>
-                </ol>
-            </nav>
-                --%>
-            </nav>
+                </asp:ContentPlaceHolder>            </nav>
         </div>
 
         <div id="startShare"></div>
@@ -94,7 +98,15 @@
 
             <div id="widgetarea-one" class="col4" style="padding-top: 30px">
 
+                
+                <aside class="widget widget_links">
+                    <h3><span>Free to your inbox.</span></h3>
+                        <p>Sign up to receive new posts about finding the God-beauty and joy in the daily mess of life.</p>
+                    <div id="signup">
+                           <a href="http://eepurl.com/H6rMX" class="button">Subscribe Here</a>
+                    </div>              
 
+                </aside>
                 <aside id="widget-about" class="widget cf">
 
 
@@ -103,11 +115,11 @@
 
                     <asp:Image ID="Image1" runat="server" ImageUrl="~/assets/i/blog2.jpg" CssClass="about" />
                     <p>
-                        <span class="green"><strong>Welcome! </strong></span>This blog chronicles when I
-                                have stopped to listen to God speak through the Bible, nature, music, and others.
-                                I hope that by sharing my journey, it will encourage you to let your <span class="green">
+                        <span class="green"><strong>Welcome! </strong></span> I
+                                stop to listen to God speak through the Bible, nature, music, and others.
+                                Thanks for sharing my journey. I hope you will let your <span class="green">
                                     <strong>soul</strong></span> <span class="blue"><strong>stop</strong></span>
-                        and hear God speak to you.
+                        and hear God speak love to you.
                     </p>
                     <p class="float-right">
                         ~ Dolly&nbsp;&nbsp;&nbsp;
@@ -133,28 +145,24 @@
                             </li>
                         </ul>
                     </div>
-
-                </aside>
-                
-                
-
-
-                <aside class="widget widget_links">
-                    <h3><span>Free to your inbox.</span></h3>
-                        <p>Sign up to receive new posts about finding the God-beauty and joy in the daily mess of life.</p>
-                    <div id="signup">
-                           <a href="http://eepurl.com/H6rMX" class="button">Subscribe Here</a>
-                    </div>
-                 
                     
+                </aside>
+                
+                
+                <% if (Page.User.Identity.IsAuthenticated)
+                       { %> 
+                                <aside class="widget widget_meta cf">
+                    
+                    <h3><span>Admin</span></h3>
 
-
-
-
-
-         
+                    <uc5:menu ID="menu2" runat="server" />
+                    <ul>
+                        <li><a href="/Account/login.aspx?logoff">Log out</a></li>
+                    </ul>
 
                 </aside>
+                    <%} %>  
+
                 
                                 <aside class="widget widget_categories cf" id="categories-2">
                     <h3><span>Categories</span>
@@ -163,7 +171,7 @@
      <div class="searchform">
                     <asp:TextBox ID="tbSearch" CssClass="field" runat="server" MaxLength="100" Text="search" OnTextChanged="tbSearch_TextChanged"
                         onblur="if(this.value==''){this.value='search'}" onfocus="if(this.value=='search'){this.value=''}"></asp:TextBox>
-                </div>
+                </div><br/>
                     <blog:CategoryList ID="CategoryList1" ShowRssIcon="false" runat="Server" />
 
                 </aside>
@@ -172,7 +180,7 @@
                 <aside class="widget widget_recent_entries cf" id="top-posts-2">
                     <h3><span>Current Favorites</span></h3>
 
-                    <uc2:RecentTopPosts ID="RecentTopPosts1" runat="server" Top="5" />
+                    <uc2:RecentTopPosts ID="RecentTopPosts1" runat="server" Top="10" />
 
 
 
@@ -185,18 +193,12 @@
 
 
 
-                    <uc1:TopPosts ID="TopPosts1" runat="server" Top="12" />
+                    <uc1:TopPosts ID="TopPosts1" runat="server" Top="10" />
 
 
 
                 </aside>
                 
-                                  <aside id="search-2" class="widget widget_search cf">
-
-
-                </aside>
-                
-
 
                 <aside class="widget widget_recent_comments cf">
                     <h3><span>Recent Comments</span></h3>
@@ -207,26 +209,26 @@
 
 
 
-
-
-                <aside class="widget cf">
-                    <h3><span>Sponser a Child</span>
-                    </h3>
-
-                    <a href="http://www.worldvision.org/content.nsf/pages/horn-of-africa-famine-2011?open&campaign=1290087">
-                        <img src="http://blog.worldvision.org/wp-content/uploads/banners/Sfaminenomore.jpg"
-                            style="border: 0; margin-left: 10px; margin-top: 10px" width="240" height="200"
-                            alt="Famine no more"></a>
-
-
-
-                </aside>
                 <aside class="widget widget_pages">
                     <h3><span>Check 'em out!</span></h3>
+                    
+                    <a href="https://tugboatyards.com/tweetspeakpoetry#whattheheck" target="_blank"><img src="http://www.tweetspeakpoetry.com/wp-content/uploads/2013/10/Tweetspeak-Poetry-Tugboat.png"/></a>
+
+
                     <uc4:Delicious ID="Delicious1" runat="server" />
 
                 </aside>
+                                <aside class="widget cf">
+                    <h3><span>Sponsor a Child</span>
+                    </h3>
 
+                    <a href="http://www.pottershouse.org.gt/" target="_blank">
+                        <img src="http://www.pottershouse.org.gt/_img/logo.png"
+                             style="border: 0; margin-left: 10px; margin-top: 10px" width="240" alt="Potter's House in Guatemala"/></a>
+
+
+
+                </aside>
                 <aside class="widget widget_recent_entries cf" id="Aside2">
                     <h3><span>Quote Quencher</span></h3>
 
@@ -235,20 +237,35 @@
 
 
                 </aside>
+                
 
             </div>
 
-        </div>
-        <div id="endShare"></div>
+
         <div id="footer-bg">
             <div id="footer" class="lw">
 
-                <p>&copy; 2013 Soul Stops &mdash; All Rights Reserved.</p>
+                <p>&copy; 2013 Soul Stops &mdash; All Rights Reserved.
+                    
+                   <% if (Page.User.Identity.IsAuthenticated)
+                       { %> |
+                  <a href="/Account/login.aspx?logoff">Log out</a>
+                    <%}
+                      else
+                      {%>
+                    | <a href="/admin">Log in</a>
+                       <%}  
+                    
+                      %>
+
+                </p> 
+
 
 
             </div>
 
 
+        </div>
         </div>
 
 

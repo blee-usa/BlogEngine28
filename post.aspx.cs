@@ -1,6 +1,7 @@
 ﻿#region Using
 
 using System;
+using System.IO;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -72,6 +73,7 @@ public partial class post : BlogEngine.Core.Web.Controls.BlogBasePage
                     postView.ID = Post.Id.ToString().Replace("-", string.Empty);
                     postView.Location = ServingLocation.SinglePost;
                     pwPost.Controls.Add(postView);
+                    AddToViewCount(post);
 
                     if (settings.EnableRelatedPosts)
                     {
@@ -131,6 +133,47 @@ public partial class post : BlogEngine.Core.Web.Controls.BlogBasePage
             Response.Redirect(Utils.RelativeWebRoot + "error404.aspx", true);
         }
 
+    }
+
+    private void AddToViewCount(Post post)
+    {
+        string counterFolder = System.Web.HttpContext.Current.Server.MapPath("App_Data/") + "counters";
+        string countFile = counterFolder + "\\" + post.Id + ".cnt";
+        int pageViewCount = 1;
+
+        try
+        {
+            // Create Directory if it doesn't exist
+            if (!Directory.Exists(counterFolder))
+                Directory.CreateDirectory(counterFolder);
+
+            // Read in Counter file if it exists
+            if (File.Exists(countFile))
+            {
+                using (StreamReader fileRdr = File.OpenText(countFile))
+                {
+                    // Increment counter
+                    pageViewCount += Int32.Parse(fileRdr.ReadLine());
+                    fileRdr.Close();
+                }
+            }
+
+            // Save Counter file
+            using (FileStream fileWrtr = new FileStream(countFile, FileMode.OpenOrCreate, FileAccess.Write))
+            {
+                using (StreamWriter streamWrtr = new StreamWriter(fileWrtr))
+                {
+                    streamWrtr.WriteLine(pageViewCount.ToString());
+                    streamWrtr.Close();
+                }
+                fileWrtr.Close();
+            }
+        }
+        catch
+        {
+            // Ignore all errors
+        }
+        
     }
 
 	/// <summary>

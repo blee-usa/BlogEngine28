@@ -70,11 +70,12 @@ Supports Thumbs: true
     font-family: Helvetica, Arial, sans-serif;
 }
 .theme-default .nivo-caption a {
-    color:#fff;
-    border-bottom:1px dotted #fff;
+    color:#9EC630;
+    text-decoration: none;
+   /* border-bottom:1px dotted #fff;*/
 }
 .theme-default .nivo-caption a:hover {
-    color:#fff;
+    color:#9EC630;
 }
 
 .theme-default .nivo-controlNav.nivo-thumbs-enabled {
