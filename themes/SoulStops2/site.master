@@ -35,7 +35,7 @@
     
 
     <!-- Nevo slider  -->
-    <link rel="stylesheet" href="/assets/js/libs/nivo-slider/themes/default/default.css?v1" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/assets/js/libs/nivo-slider/themes/default/default.css?v2" type="text/css" media="screen" />
 
     <link rel="stylesheet" href="/assets/js/libs/nivo-slider/nivo-slider.css" type="text/css" media="screen" />
     <script type="text/javascript" src="/assets/js/libs/nivo-slider/jquery.nivo.slider.js"></script>
@@ -101,9 +101,11 @@
                 
                 <aside class="widget widget_links">
                     <h3><span>Free to your inbox.</span></h3>
-                        <p>Sign up to receive new posts about finding the God-beauty and joy in the daily mess of life.</p>
+                        <p>Join now to receive new posts about finding the God-beauty and joy in the messiness of life.</p>
+                    <p>As a thank you for signing up you will be able to download my <strong><em>Soul Care Manifesto</em></strong>, filled with thoughts on soul care and a few 'how to" tips gleaned from my past 10-15 years of experience.</p>
+                    <p><img src="<%=ResolveUrl("~/assets/i/ManifestoCover.png") %>"/></p>
                     <div id="signup">
-                           <a href="http://eepurl.com/H6rMX" class="button">Subscribe Here</a>
+                           <a href="http://eepurl.com/H6rMX" class="button">Join Now</a>
                     </div>              
 
                 </aside>
